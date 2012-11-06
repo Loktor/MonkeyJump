@@ -80,7 +80,7 @@ namespace MonkeyJumpGameModel
         {
 
             //Draw the sprite in the centre of an 800x600 screen
-            spriteBatch.Draw(sprite, new Vector2(position.X, position.Y), sourceRect, Color.White, 0f, origin, 1.5f, SpriteEffects.None, 0);
+            spriteBatch.Draw(sprite, new Vector2(Position.X, Position.Y), sourceRect, Color.White, 0f, origin, 1.5f, SpriteEffects.None, 0);
 
             base.Draw(spriteBatch, gameTime);
         }

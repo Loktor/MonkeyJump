@@ -2,8 +2,8 @@ Content\blank.xnb
 Content\gradient.xnb
 Content\game\game_background.xnb
 Content\game\palmBGLoop.xnb
+Content\game\monkeySprite.xnb
 Content\menufont.xnb
 Content\gamefont.xnb
 Content\game\bgSound.xnb
 Content\game\bgSound.wma
-Content\game\monkeySprite.xnb

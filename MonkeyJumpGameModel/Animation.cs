@@ -9,27 +9,25 @@ namespace MonkeyJumpGameModel
 {
     public class Animation
     {
-        internal Texture2D texture;
-        public Vector2 FrameSize
+        public Texture2D Texture { get; set; }
+
+        public Vector2 FrameSize { get; set; }
+
+        public int FrameCount { get; set; }
+
+        public int CurrentFrame { get; set; }
+
+        public void Animation(Texture2D texture, int frameCount, Vector2 frameSize)
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            CurrentFrame = 0;
+            Texture = texture;
+            FrameCount = frameCount;
+            FrameSize = frameSize;
         }
 
-        public int Frames
+        public void Update()
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+
         }
     }
 }

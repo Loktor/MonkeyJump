@@ -12,6 +12,12 @@ namespace MonkeyJumpGameModel
     {
         internal Vector2 position;
 
+        public Vector2 Position
+        {
+            get { return position; }
+            set { position = value; }
+        }
+
         public abstract void Draw(SpriteBatch spriteBatch, GameTime gameTime);
         public abstract void Update(GameTime gameTime);
         public abstract void LoadTextures(ContentManager content);

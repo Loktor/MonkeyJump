@@ -10,22 +10,13 @@ namespace MonkeyJumpGameModel
 {
     public abstract class AnimationEntity : GameEntity
     {
-        public List<MonkeyJumpGameModel.Animation> Animations
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public abstract List<MonkeyJumpGameModel.Animation> Animations { get; set; }
 
         public abstract Animation CurrentAnimation { get; set; }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
-            
+            spriteBatch.Draw(CurrentAnimation.Texture, Position, Color.White);
         }
 
         public override void Update(GameTime gameTime)

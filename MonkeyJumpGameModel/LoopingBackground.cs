@@ -18,9 +18,9 @@ namespace MonkeyJumpGameModel
 
         public override void Update(GameTime gameTime)
         {
-            if (position.Y >= 0)
+            if (Position.Y >= 0)
             {
-                int overflow = (int)position.Y;
+                int overflow = (int)Position.Y;
                 ResetPosition(overflow);
             }
             else
