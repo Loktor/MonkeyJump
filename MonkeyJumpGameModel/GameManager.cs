@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace MonkeyJumpGameModel
 {
@@ -12,6 +10,7 @@ namespace MonkeyJumpGameModel
     {
         private List<GameEntity> gameEntities;
         private LoopingBackground loopingBackground;
+        private Player player;
 
         public Viewport Screen { get; set; }
         public int GameSpeed { get; set; }
@@ -24,6 +23,10 @@ namespace MonkeyJumpGameModel
             GameSpeed = 5;
             gameEntities = new List<GameEntity>();
             loopingBackground = new LoopingBackground();
+            player = new Player();
+
+            gameEntities.Add(player);
+
         }
 
         public static GameManager CreateNewGameManager(Viewport screen)

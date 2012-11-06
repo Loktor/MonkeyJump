@@ -16,13 +16,6 @@
     <RootNamespace>PhoneContent</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="background.png">
-      <Name>background</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="blank.png">
       <Name>blank</Name>
       <Importer>TextureImporter</Importer>
@@ -69,6 +62,20 @@
   <ItemGroup>
     <Compile Include="game\palmBGLoop.png">
       <Name>palmBGLoop</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="game\bgSound.mp3">
+      <Name>bgSound</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="game\monkeySprite.png">
+      <Name>monkeySprite</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

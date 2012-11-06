@@ -3,14 +3,14 @@
   <Class Name="MonkeyJumpGameModel.DrawableEntity">
     <Position X="5.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgAAAAAAIAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>DrawableEntity.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MonkeyJumpGameModel.GameEntity">
     <Position X="4.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQEAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQEAAAAAAAAAgAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GameEntity.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -24,15 +24,12 @@
   <Class Name="MonkeyJumpGameModel.Animation">
     <Position X="0.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAgAAAAAAAAAAAAE=</HashCode>
       <FileName>Animation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MonkeyJumpGameModel.Character">
     <Position X="2" Y="6" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAACA=</HashCode>
       <FileName>Character.cs</FileName>
@@ -59,7 +56,7 @@
   <Class Name="MonkeyJumpGameModel.Player">
     <Position X="0.5" Y="8.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>CAQEAEAAgAAAAAAAEAAAAACAAFAAAAgAAAAAAAAQAAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
   </Class>

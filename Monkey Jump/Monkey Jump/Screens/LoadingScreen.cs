@@ -144,7 +144,7 @@ namespace Monkey_Jump
                 SpriteBatch spriteBatch = ScreenManager.SpriteBatch;
                 SpriteFont font = ScreenManager.Font;
 
-                const string message = "Loading Bananas again...";
+                const string message = "Loading...";
 
                 // Center the text in the viewport.
                 Viewport viewport = ScreenManager.GraphicsDevice.Viewport;

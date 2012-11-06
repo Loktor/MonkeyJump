@@ -25,12 +25,12 @@ namespace MonkeyJumpGameModel
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
-            throw new NotImplementedException();
+            
         }
 
         public override void Update(GameTime gameTime)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

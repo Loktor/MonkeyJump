@@ -14,6 +14,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 using MonkeyJumpGameModel;
 #endregion
 
@@ -32,6 +33,7 @@ namespace Monkey_Jump
         SpriteFont gameFont;
         Texture2D mainBackground;
         GameManager gameManager;
+        Song bgMusic;
 
         Random random = new Random();
 
@@ -65,15 +67,20 @@ namespace Monkey_Jump
             mainBackground = content.Load<Texture2D>("game/game_background");
             gameManager.LoadEntityTextures(content);
 
+            bgMusic = content.Load<Song>("game/bgSound");
+            MediaPlayer.IsRepeating = true;
+
             // A real game would probably have more content than this sample, so
             // it would take longer to load. We simulate that by delaying for a
             // while, giving you a chance to admire the beautiful loading screen.
-            Thread.Sleep(1000);
+            //Thread.Sleep(1000);
 
             // once the load has finished, we use ResetElapsedTime to tell the game's
             // timing mechanism that we have just finished a very long frame, and that
             // it should not try to catch up.
             ScreenManager.Game.ResetElapsedTime();
+
+            MediaPlayer.Play(bgMusic);
         }
 
 
@@ -127,6 +134,7 @@ namespace Monkey_Jump
             PlayerIndex player;
             if (input.IsNewButtonPress(Buttons.Back, ControllingPlayer, out player))
             {
+                MediaPlayer.Stop();
                 LoadingScreen.Load(ScreenManager, false, ControllingPlayer, new BackgroundScreen(), new MainMenuScreen());
             }
             else
@@ -163,5 +171,7 @@ namespace Monkey_Jump
 
 
         #endregion
+
+        
     }
 }
