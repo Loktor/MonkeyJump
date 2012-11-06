@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>background.png</Source>
+      <Name>background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\background.xnb</Output>
+      <Time>2012-10-31T09:47:21.3362+01:00</Time>
+    </Item>
+    <Item>
+      <Source>blank.png</Source>
+      <Name>blank</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\blank.xnb</Output>
+      <Time>2012-10-31T09:47:21.3512+01:00</Time>
+    </Item>
+    <Item>
+      <Source>gradient.png</Source>
+      <Name>gradient</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\gradient.xnb</Output>
+      <Time>2012-10-31T09:47:21.3892+01:00</Time>
+    </Item>
+    <Item>
+      <Source>game\game_background.png</Source>
+      <Name>game\game_background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\game_background.xnb</Output>
+      <Time>2012-10-31T09:49:32.4302+01:00</Time>
+    </Item>
+    <Item>
+      <Source>menufont.spritefont</Source>
+      <Name>menufont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\menufont.xnb</Output>
+      <Time>2012-10-31T09:47:21.3912+01:00</Time>
+    </Item>
+    <Item>
+      <Source>gamefont.spritefont</Source>
+      <Name>gamefont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\gamefont.xnb</Output>
+      <Time>2012-10-31T09:47:21.3652+01:00</Time>
+    </Item>
+    <Item>
+      <Source>game\palmBGLoop.png</Source>
+      <Name>game\palmBGLoop</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\palmBGLoop.xnb</Output>
+      <Time>2012-10-31T12:45:08.9102+01:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{DBBFCB7D-D4DC-4EB2-8964-C227425D5003}</ContentProjectGUID>
+      <TargetPlatform>WindowsPhone</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey JumpContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>D:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>D:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2011-09-01T16:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>D:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>D:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>D:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>D:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2011-09-01T16:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>D:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2012-04-25T16:41:07.781+02:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
