@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework.Content;
 
 namespace MonkeyJumpGameModel
 {
-    public class Character : AnimationEntity, ICollidable
+    public abstract class Character : AnimationEntity, ICollidable
     {
         public Collider Collider
         {
@@ -18,23 +18,6 @@ namespace MonkeyJumpGameModel
             {
                 throw new NotImplementedException();
             }
-        }
-
-        public override Animation CurrentAnimation
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public override void LoadTextures(ContentManager content)
-        {
-            throw new NotImplementedException();
         }
     }
 }

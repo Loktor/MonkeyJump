@@ -3,7 +3,16 @@ Content\gradient.xnb
 Content\game\game_background.xnb
 Content\game\palmBGLoop.xnb
 Content\game\monkeySprite.xnb
+Content\game\monkeyClimbingSprite.xnb
+Content\game\monkeyJumpingSprite.xnb
+Content\game\banana.xnb
+Content\game\coconut.xnb
+Content\game\leaf.xnb
 Content\menufont.xnb
 Content\gamefont.xnb
 Content\game\bgSound.xnb
 Content\game\bgSound.wma
+Content\game\monkeyCollectable.xnb
+Content\game\monkeyCollectable.wma
+Content\game\monkeyDeath.xnb
+Content\game\monkeyDeath.wma

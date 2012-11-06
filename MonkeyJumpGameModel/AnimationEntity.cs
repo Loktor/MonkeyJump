@@ -10,18 +10,34 @@ namespace MonkeyJumpGameModel
 {
     public abstract class AnimationEntity : GameEntity
     {
-        public abstract List<MonkeyJumpGameModel.Animation> Animations { get; set; }
+        public AnimationEntity()
+        {
+            CurrentAnimation = null;
+        }
 
-        public abstract Animation CurrentAnimation { get; set; }
+        public Animation CurrentAnimation { get; set; }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
-            spriteBatch.Draw(CurrentAnimation.Texture, Position, Color.White);
+            CheckIfCurrentAnimationValid();
+            CurrentAnimation.Draw(spriteBatch, position);
         }
 
         public override void Update(GameTime gameTime)
         {
-            
+            CheckIfCurrentAnimationValid();
+            CurrentAnimation.Update(gameTime);
+        }
+
+        /// <summary>
+        /// Displays an error message if the current animation wasn't set yet
+        /// </summary>
+        private void CheckIfCurrentAnimationValid()
+        {
+            if (CurrentAnimation == null)
+            {
+                throw new NullReferenceException("No CurrentAnimation set -> Null Pointer");
+            }
         }
     }
 }
