@@ -2,6 +2,6 @@ Content\background.xnb
 Content\blank.xnb
 Content\gradient.xnb
 Content\game\game_background.xnb
+Content\game\palmBGLoop.xnb
 Content\menufont.xnb
 Content\gamefont.xnb
-Content\game\palmBGLoop.xnb

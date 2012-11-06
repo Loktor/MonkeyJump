@@ -19,9 +19,23 @@ C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Üb
 C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\MonkeyJumpGameModel.dll
 C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\MonkeyJumpGameModel.pdb
 C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\palmBGLoop.xnb
-C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Monkey Jump.xap
-C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\XapCacheFile.xml
-C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\AppManifest.xaml
-C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\WMAppManifest.xml.g
-C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\WMAppManifest.xml
-bin\Windows Phone\Debug\
+C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\background.xnb
+C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\blank.xnb
+C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\gradient.xnb
+C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\game_background.xnb
+C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\palmBGLoop.xnb
+C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\menufont.xnb
+C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\gamefont.xnb
+C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Monkey Jump.dll
+C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Monkey Jump.pdb
+C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\MonkeyJumpGameModel.dll
+C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\MonkeyJumpGameModel.pdb
+C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\Monkey Jump.dll
+C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\Monkey Jump.pdb
+C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\AppManifest.xaml
+C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\WMAppManifest.xml.g
+C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\WMAppManifest.xml
+C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Monkey Jump.xap
+C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\XapCacheFile.xml

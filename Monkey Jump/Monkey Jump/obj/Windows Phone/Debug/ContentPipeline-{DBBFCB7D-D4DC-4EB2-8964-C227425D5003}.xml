@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\background.xnb</Output>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\background.xnb</Output>
       <Time>2012-10-31T09:47:21.3362+01:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\blank.xnb</Output>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\blank.xnb</Output>
       <Time>2012-10-31T09:47:21.3512+01:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\gradient.xnb</Output>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\gradient.xnb</Output>
       <Time>2012-10-31T09:47:21.3892+01:00</Time>
     </Item>
     <Item>
@@ -34,8 +34,17 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\game_background.xnb</Output>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\game_background.xnb</Output>
       <Time>2012-10-31T09:49:32.4302+01:00</Time>
+    </Item>
+    <Item>
+      <Source>game\palmBGLoop.png</Source>
+      <Name>game\palmBGLoop</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\palmBGLoop.xnb</Output>
+      <Time>2012-10-31T12:45:08.9102+01:00</Time>
     </Item>
     <Item>
       <Source>menufont.spritefont</Source>
@@ -43,7 +52,7 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\menufont.xnb</Output>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\menufont.xnb</Output>
       <Time>2012-10-31T09:47:21.3912+01:00</Time>
     </Item>
     <Item>
@@ -52,17 +61,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\gamefont.xnb</Output>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\gamefont.xnb</Output>
       <Time>2012-10-31T09:47:21.3652+01:00</Time>
-    </Item>
-    <Item>
-      <Source>game\palmBGLoop.png</Source>
-      <Name>game\palmBGLoop</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\palmBGLoop.xnb</Output>
-      <Time>2012-10-31T12:45:08.9102+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -71,10 +71,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey JumpContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Dropbox-FH\Dropbox\fh-hagenberg\FH Hagenberg Semester 5-6\5. Semester\MOG\Übungen\Monkey Jump Projekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey JumpContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
