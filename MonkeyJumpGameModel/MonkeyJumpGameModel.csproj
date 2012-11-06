@@ -63,6 +63,7 @@
     <Compile Include="AnimationEntity.cs" />
     <Compile Include="Character.cs" />
     <Compile Include="Collider.cs" />
+    <Compile Include="Direction.cs" />
     <Compile Include="DrawableEntity.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="GameEntity.cs" />

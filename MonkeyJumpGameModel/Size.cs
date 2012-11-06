@@ -5,6 +5,9 @@ using System.Text;
 
 namespace MonkeyJumpGameModel
 {
+    /// <summary>
+    /// Class to define an size
+    /// </summary>
     public class Size
     {
         public int Width { get; set; }

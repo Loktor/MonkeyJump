@@ -16,6 +16,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using MonkeyJumpGameModel;
+using Microsoft.Xna.Framework.Input.Touch;
 #endregion
 
 namespace Monkey_Jump
@@ -129,6 +130,7 @@ namespace Monkey_Jump
 
             KeyboardState keyboardState = input.CurrentKeyboardStates[playerIndex];
             GamePadState gamePadState = input.CurrentGamePadStates[playerIndex];
+            TouchCollection touchState = input.TouchState;
 
             // if the user pressed the back button, we return to the main menu
             PlayerIndex player;
@@ -139,7 +141,7 @@ namespace Monkey_Jump
             }
             else
             {
-                // TODO Implement touch action
+                gameManager.HandleInput(touchState);
             }
         }
 
