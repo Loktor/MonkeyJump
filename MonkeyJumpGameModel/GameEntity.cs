@@ -21,5 +21,6 @@ namespace MonkeyJumpGameModel
         public abstract void Draw(SpriteBatch spriteBatch, GameTime gameTime);
         public abstract void Update(GameTime gameTime);
         public abstract void LoadTextures(ContentManager content);
+        public virtual void Init(Rectangle gameBounds) { }
     }
 }

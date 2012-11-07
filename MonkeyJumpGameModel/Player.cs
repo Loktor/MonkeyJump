@@ -10,24 +10,49 @@ using Microsoft.Xna.Framework.Input.Touch;
 
 namespace MonkeyJumpGameModel
 {
-    public class Player : Character
+    public class Player : AnimationEntity, ICollidable
     {
         Animation climbAnimation = null;
         Animation jumpAnimation = null;
         bool isJumping = false;
-        Direction headingDirection = Direction.Left;
+        Direction headingDirection;
+        GameManager gameManager;
+        Collider collider;
 
-        public Player()
+        public Collider Collider
         {
-            position.X = 60;
+            get
+            {
+                return collider;
+            }
+            set
+            {
+                Collider = value;
+            }
+        }
+
+        public override void Init(Rectangle gameBounds)
+        {
+            base.Init(gameBounds);
+            gameManager = GameManager.Instance;
+            position.X = gameManager.GameBounds.X;
             position.Y = 600;
+            headingDirection = Direction.Left;
+            collider = new Collider(position, new Size(64,64));
+            collider.Scale(1.5f);
         }
 
         public override void Update(GameTime gameTime)
         {
             if (isJumping)
             {
-                position.X += (int)headingDirection * GameManager.Instance.GameSpeed;
+                position.X += (int)headingDirection * gameManager.GameSpeed;
+                collider.MoveToPoint(position);
+                if (!Collider.IsInside(gameManager.GameBoundsCollider))
+                {
+                    isJumping = false;
+                    CurrentAnimation = climbAnimation;
+                }
             }
 
             base.Update(gameTime);
@@ -65,8 +90,14 @@ namespace MonkeyJumpGameModel
                 if(CurrentAnimation != jumpAnimation)
                     CurrentAnimation = jumpAnimation;
                 headingDirection = (Direction)((int)headingDirection * -1);
-                jumpAnimation.SpriteEffects = headingDirection == Direction.Left ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+                FitAnimationDirection();
             }
+        }
+
+        private void FitAnimationDirection()
+        {
+            jumpAnimation.SpriteEffects = headingDirection == Direction.Left ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+            climbAnimation.SpriteEffects = headingDirection == Direction.Left ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
         }
     }
 }

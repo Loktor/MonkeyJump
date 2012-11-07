@@ -15,13 +15,18 @@ namespace MonkeyJumpGameModel
 
         public Viewport Screen { get; set; }
         public int GameSpeed { get; set; }
+        public Rectangle GameBounds { get; set; }
 
         private static GameManager instance;
+        private const int BORDER_WIDTH = 60;
 
         private GameManager(Viewport screen) 
         {
+            Rectangle tileSave = screen.TitleSafeArea;
             Screen = screen;
             GameSpeed = 5;
+            // Move the GameBounds away from the sides because there are the palms
+            GameBounds = new Rectangle(tileSave.X + BORDER_WIDTH, tileSave.Y, tileSave.Width - BORDER_WIDTH * 2, tileSave.Height);
             gameEntities = new List<GameEntity>();
             loopingBackground = new LoopingBackground();
             player = new Player();
@@ -45,6 +50,14 @@ namespace MonkeyJumpGameModel
                     throw new Exception("GameManager wasn't initialized yet, call InitializeGameManager before retreiving an instance");
                 }
                 return instance;
+            }
+        }
+
+        public Collider GameBoundsCollider
+        {
+            get
+            {
+                return new Collider(GameBounds);
             }
         }
     
@@ -75,6 +88,16 @@ namespace MonkeyJumpGameModel
             foreach (GameEntity entity in gameEntities)
             {
                 entity.LoadTextures(content);
+            }
+        }
+
+        public void InitEntities()
+        {
+            loopingBackground.Init(GameBounds);
+
+            foreach (GameEntity entity in gameEntities)
+            {
+                entity.Init(GameBounds);
             }
         }
 
