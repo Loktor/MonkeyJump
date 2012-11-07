@@ -58,7 +58,7 @@ namespace MonkeyJumpGameModel
             ResourceManager = new ResourceManager();
             Rectangle tileSave = screen.TitleSafeArea;
             Screen = screen;
-            GameSpeed = 20;
+            GameSpeed = 5;
             // Move the GameBounds away from the sides because there are the palms
             GameBounds = new Rectangle(tileSave.X + BORDER_WIDTH, tileSave.Y, tileSave.Width - BORDER_WIDTH * 2, tileSave.Height);
             collidableGameEntities = new List<GameEntity>();

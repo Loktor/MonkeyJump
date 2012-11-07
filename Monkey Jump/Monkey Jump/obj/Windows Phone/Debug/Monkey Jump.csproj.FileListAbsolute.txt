@@ -95,9 +95,13 @@ C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows 
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyCollectable.wma
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyDeath.wma
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\debug\rect.xnb
-C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Monkey Jump.xap
-C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\XapCacheFile.xml
-C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\AppManifest.xaml
-C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\WMAppManifest.xml.g
-C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\WMAppManifest.xml
-bin\Windows Phone\Debug\
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyClimbingSprite.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyJumpingSprite.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\banana.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\coconut.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\leaf.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\debug\rect.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyCollectable.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyDeath.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyCollectable.wma
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyDeath.wma

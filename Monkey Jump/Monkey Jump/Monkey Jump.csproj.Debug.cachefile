@@ -8,12 +8,12 @@ Content\game\monkeyJumpingSprite.xnb
 Content\game\banana.xnb
 Content\game\coconut.xnb
 Content\game\leaf.xnb
+Content\debug\rect.xnb
 Content\menufont.xnb
 Content\gamefont.xnb
 Content\game\bgSound.xnb
 Content\game\monkeyCollectable.xnb
 Content\game\monkeyDeath.xnb
-Content\debug\rect.xnb
 Content\game\bgSound.wma
 Content\game\monkeyCollectable.wma
 Content\game\monkeyDeath.wma

@@ -18,8 +18,13 @@ namespace MonkeyJumpGameModel
         Direction headingDirection;
         GameManager gameManager;
         Rectangle gameBounds;
+        int gameYCenter;
         Collider collider;
         Size monkeySize = new Size(64, 64);
+        int monkeyYLevel = 600;
+
+        // Playable values between 15 and 80. Higher -> more gravity, lower jump
+        int monkeyJumpGravity = 25; 
 
         public Collider Collider
         {
@@ -38,21 +43,26 @@ namespace MonkeyJumpGameModel
             base.Init(gameBounds);
             gameManager = GameManager.Instance;
             position.X = gameBounds.X;
-            position.Y = 600;
+            position.Y = monkeyYLevel;
             headingDirection = Direction.Left;
             collider = new Collider(position, monkeySize,true);
             this.gameBounds = gameBounds;
+            gameYCenter = (gameBounds.Width / 2) + gameBounds.X;
         }
 
         public override void Update(GameTime gameTime)
         {
             if (isJumping)
             {
+
                 position.X += (int)headingDirection * gameManager.GameSpeed * 2;
+                position.Y = position.X > gameYCenter ? position.Y + (1 * ((position.X - gameYCenter) / monkeyJumpGravity) * (int)headingDirection) : position.Y - (1 * ((gameYCenter - position.X) / monkeyJumpGravity) * (int)headingDirection);
                 collider.MoveToPoint(position);
-                if (collider.CollisionBounds.X < gameBounds.X || collider.CollisionBounds.X > gameBounds.Right)
+
+                if (position.X < gameBounds.X || position.X > gameBounds.Right)
                 {
-                    position.X = collider.CollisionBounds.X < gameBounds.X ? gameBounds.X : gameBounds.Right;
+                    position.X = position.X < gameBounds.X ? gameBounds.X : gameBounds.Right;
+                    position.Y = monkeyYLevel;
                     collider.MoveToPoint(position);
                     isJumping = false;
                     CurrentAnimation = climbAnimation;
