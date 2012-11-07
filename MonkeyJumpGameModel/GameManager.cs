@@ -23,6 +23,8 @@ namespace MonkeyJumpGameModel
 
         private static GameManager instance;
         private const int BORDER_WIDTH = 60;
+        private Vector2 scorePos = new Vector2(300, 10);
+        private const String SCORE_TEXT = "Score: ";
 #if DEBUG
         private bool showBounds = true;
         private const String BOUNDS_RECT_TEX_KEY = "debug/rect";
@@ -59,7 +61,7 @@ namespace MonkeyJumpGameModel
             ResourceManager = new ResourceManager();
             Rectangle tileSave = screen.TitleSafeArea;
             Screen = screen;
-            GameSpeed = 5;
+            GameSpeed = 10;
             // Move the GameBounds away from the sides because there are the palms
             GameBounds = new Rectangle(tileSave.X + BORDER_WIDTH, tileSave.Y, tileSave.Width - BORDER_WIDTH * 2, tileSave.Height);
             collidableGameEntities = new List<GameEntity>();
@@ -131,6 +133,7 @@ namespace MonkeyJumpGameModel
             }
 
             player.Draw(spriteBatch, gameTime);
+            spriteBatch.DrawString(ResourceManager.RetreiveFont(ResourceManager.SCORE_FONT), SCORE_TEXT + player.PlayerScore, scorePos, Color.GhostWhite);
         }
 
         public void LoadEntityTextures(ContentManager content)
@@ -147,6 +150,7 @@ namespace MonkeyJumpGameModel
             // Load resuable textures
             ResourceManager.Add(ResourceManager.MONKEY_DEATH_SOUND, content.Load<Song>(ResourceManager.MONKEY_DEATH_SOUND));
             ResourceManager.Add(ResourceManager.COCONUT_PATH,content.Load<Texture2D>(ResourceManager.COCONUT_PATH));
+            ResourceManager.Add(ResourceManager.SCORE_FONT, content.Load<SpriteFont>(ResourceManager.SCORE_FONT));
 
             foreach (GameEntity entity in collidableGameEntities)
             {

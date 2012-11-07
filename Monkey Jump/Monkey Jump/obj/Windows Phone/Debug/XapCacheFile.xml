@@ -1,10 +1,10 @@
-﻿<xapCache source="C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Monkey Jump.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="11/7/2012 9:07:31 PM">
+﻿<xapCache source="C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Monkey Jump.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="11/7/2012 9:34:25 PM">
   <file source="C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\Background.png" archivePath="Background.png" lastWriteTime="10/31/2012 9:46:58 AM" />
   <file source="C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\GameThumbnail.png" archivePath="GameThumbnail.png" lastWriteTime="10/31/2012 9:46:58 AM" />
   <file source="C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="11/6/2012 1:03:38 PM" />
   <file source="C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="11/7/2012 8:35:11 PM" />
-  <file source="C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Monkey Jump.dll" archivePath="Monkey Jump.dll" lastWriteTime="11/7/2012 9:07:29 PM" />
-  <file source="C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\bin\Windows Phone\Debug\MonkeyJumpGameModel.dll" archivePath="MonkeyJumpGameModel.dll" lastWriteTime="11/7/2012 9:07:29 PM" />
+  <file source="C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Monkey Jump.dll" archivePath="Monkey Jump.dll" lastWriteTime="11/7/2012 9:34:24 PM" />
+  <file source="C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\bin\Windows Phone\Debug\MonkeyJumpGameModel.dll" archivePath="MonkeyJumpGameModel.dll" lastWriteTime="11/7/2012 9:34:23 PM" />
   <file source="C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\blank.xnb" archivePath="Content\blank.xnb" lastWriteTime="11/7/2012 8:35:02 PM" />
   <file source="C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\gradient.xnb" archivePath="Content\gradient.xnb" lastWriteTime="11/7/2012 8:35:02 PM" />
   <file source="C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\game_background.xnb" archivePath="Content\game\game_background.xnb" lastWriteTime="11/7/2012 8:35:02 PM" />
@@ -21,6 +21,7 @@
   <file source="C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\bgSound.xnb" archivePath="Content\game\bgSound.xnb" lastWriteTime="11/7/2012 8:35:05 PM" />
   <file source="C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyCollectable.xnb" archivePath="Content\game\monkeyCollectable.xnb" lastWriteTime="11/7/2012 8:35:06 PM" />
   <file source="C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyDeath.xnb" archivePath="Content\game\monkeyDeath.xnb" lastWriteTime="11/7/2012 8:35:06 PM" />
+  <file source="C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\scoreFont.xnb" archivePath="Content\game\scoreFont.xnb" lastWriteTime="11/7/2012 9:31:15 PM" />
   <file source="C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\bgSound.wma" archivePath="Content\game\bgSound.wma" lastWriteTime="11/7/2012 8:35:05 PM" />
   <file source="C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyCollectable.wma" archivePath="Content\game\monkeyCollectable.wma" lastWriteTime="11/7/2012 8:35:05 PM" />
   <file source="C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyDeath.wma" archivePath="Content\game\monkeyDeath.wma" lastWriteTime="11/7/2012 8:35:06 PM" />

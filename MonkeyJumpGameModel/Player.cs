@@ -13,19 +13,25 @@ namespace MonkeyJumpGameModel
 {
     public class Player : AnimationEntity, ICollidable
     {
-        Animation climbAnimation = null;
-        Animation jumpAnimation = null;
-        PlayerState playerState;
-        Direction headingDirection;
-        GameManager gameManager;
-        Rectangle gameBounds;
-        int gameYCenter;
-        Collider collider;
-        Size monkeySize = new Size(64, 64);
-        int monkeyYLevel = 600;
-
+        private Animation climbAnimation = null;
+        private Animation jumpAnimation = null;
+        private PlayerState playerState;
+        private Direction headingDirection;
+        private GameManager gameManager;
+        private Rectangle gameBounds;
+        private int gameYCenter;
+        private Collider collider;
+        private Size monkeySize = new Size(64, 64);
+        private int monkeyYLevel = 600;
+        private int playerScore = 0;
         // Playable values between 15 and 80. Higher -> more gravity, lower jump
         int monkeyJumpGravity = 25;
+
+        public int PlayerScore
+        {
+            get { return playerScore; }
+            set { playerScore = value; }
+        }
 
         public Collider Collider
         {
@@ -54,6 +60,10 @@ namespace MonkeyJumpGameModel
 
         public override void Update(GameTime gameTime)
         {
+            if (playerState != PlayerState.Dying)
+            {
+                playerScore += 1;
+            }
             if (playerState == PlayerState.Jumping)
             {
                 position.X += (int)headingDirection * gameManager.GameSpeed * 2;
@@ -76,7 +86,7 @@ namespace MonkeyJumpGameModel
 
                 if (position.Y < gameBounds.Bottom)
                 {
-
+                    // TODO Implement Game Over
                 }
             }
 

@@ -14,9 +14,11 @@ namespace MonkeyJumpGameModel
     {
         public const string COCONUT_PATH = "game/coconut";
         public const string MONKEY_DEATH_SOUND = "game/monkeyDeath";
+        public const string SCORE_FONT = "game/scoreFont";
 
         Dictionary<String, Texture2D> textureDictionary = new Dictionary<string, Texture2D>();
         Dictionary<String, Song> songDictionary = new Dictionary<string, Song>();
+        Dictionary<String, SpriteFont> fontDictionary = new Dictionary<string, SpriteFont>();
 
         public void Add(String key, Texture2D value)
         {
@@ -36,6 +38,15 @@ namespace MonkeyJumpGameModel
             songDictionary.Add(key, value);
         }
 
+        public void Add(String key, SpriteFont value)
+        {
+            if (fontDictionary.ContainsKey(key))
+            {
+                throw new InvalidOperationException("Key is already in dictionary");
+            }
+            fontDictionary.Add(key, value);
+        }
+
         public Texture2D RetreiveTexture(String key)
         {
             if (!textureDictionary.ContainsKey(key))
@@ -52,6 +63,15 @@ namespace MonkeyJumpGameModel
                 throw new InvalidOperationException("Key not in dictionary");
             }
             return songDictionary[key];
+        }
+
+        public SpriteFont RetreiveFont(String key)
+        {
+            if (!fontDictionary.ContainsKey(key))
+            {
+                throw new InvalidOperationException("Key not in dictionary");
+            }
+            return fontDictionary[key];
         }
     }
 }
