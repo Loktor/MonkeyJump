@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input.Touch;
+using Microsoft.Xna.Framework.Media;
 
 namespace MonkeyJumpGameModel
 {
@@ -66,9 +67,6 @@ namespace MonkeyJumpGameModel
             loopingBackground = new LoopingBackground();
 
             player = new Player();
-
-            collidableGameEntities.Add(player);
-
             InitGameEntityGenerators();
         }
 
@@ -90,11 +88,17 @@ namespace MonkeyJumpGameModel
                 {
                     entitiesToRemove.Add(entity);
                 }
+                else if (player.Collider.CollidesWith(((ICollidable)entity).Collider))
+                {
+                    player.KillPlayer();
+                }
             }
             foreach (GameEntity entity in decorationEntities)
             {
                 entity.Update(gameTime);
             }
+
+            player.Update(gameTime);
             
             foreach (GameEntityGenerator generator in gameEntityGenerators)
             {
@@ -125,6 +129,8 @@ namespace MonkeyJumpGameModel
             {
                 entity.Draw(spriteBatch, gameTime);
             }
+
+            player.Draw(spriteBatch, gameTime);
         }
 
         public void LoadEntityTextures(ContentManager content)
@@ -137,7 +143,9 @@ namespace MonkeyJumpGameModel
 #endif
             loopingBackground.LoadTextures(content);
 
+
             // Load resuable textures
+            ResourceManager.Add(ResourceManager.MONKEY_DEATH_SOUND, content.Load<Song>(ResourceManager.MONKEY_DEATH_SOUND));
             ResourceManager.Add(ResourceManager.COCONUT_PATH,content.Load<Texture2D>(ResourceManager.COCONUT_PATH));
 
             foreach (GameEntity entity in collidableGameEntities)
@@ -148,6 +156,8 @@ namespace MonkeyJumpGameModel
             {
                 entity.LoadTextures(content);
             }
+
+            player.LoadTextures(content);
         }
 
         public void InitEntities()
@@ -162,6 +172,7 @@ namespace MonkeyJumpGameModel
             {
                 entity.Init(GameBounds);
             }
+            player.Init(GameBounds);
         }
 
         public void HandleInput(TouchCollection touch)

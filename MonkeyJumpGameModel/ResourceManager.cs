@@ -13,6 +13,7 @@ namespace MonkeyJumpGameModel
     public class ResourceManager
     {
         public const string COCONUT_PATH = "game/coconut";
+        public const string MONKEY_DEATH_SOUND = "game/monkeyDeath";
 
         Dictionary<String, Texture2D> textureDictionary = new Dictionary<string, Texture2D>();
         Dictionary<String, Song> songDictionary = new Dictionary<string, Song>();

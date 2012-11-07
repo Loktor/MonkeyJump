@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
+using Microsoft.Xna.Framework.Media;
 
 namespace MonkeyJumpGameModel
 {
@@ -14,7 +15,7 @@ namespace MonkeyJumpGameModel
     {
         Animation climbAnimation = null;
         Animation jumpAnimation = null;
-        bool isJumping = false;
+        PlayerState playerState;
         Direction headingDirection;
         GameManager gameManager;
         Rectangle gameBounds;
@@ -24,7 +25,7 @@ namespace MonkeyJumpGameModel
         int monkeyYLevel = 600;
 
         // Playable values between 15 and 80. Higher -> more gravity, lower jump
-        int monkeyJumpGravity = 25; 
+        int monkeyJumpGravity = 25;
 
         public Collider Collider
         {
@@ -45,6 +46,7 @@ namespace MonkeyJumpGameModel
             position.X = gameBounds.X;
             position.Y = monkeyYLevel;
             headingDirection = Direction.Left;
+            playerState = PlayerState.Climbing;
             collider = new Collider(position, monkeySize,true);
             this.gameBounds = gameBounds;
             gameYCenter = (gameBounds.Width / 2) + gameBounds.X;
@@ -52,9 +54,8 @@ namespace MonkeyJumpGameModel
 
         public override void Update(GameTime gameTime)
         {
-            if (isJumping)
+            if (playerState == PlayerState.Jumping)
             {
-
                 position.X += (int)headingDirection * gameManager.GameSpeed * 2;
                 position.Y = position.X > gameYCenter ? position.Y + (1 * ((position.X - gameYCenter) / monkeyJumpGravity) * (int)headingDirection) : position.Y - (1 * ((gameYCenter - position.X) / monkeyJumpGravity) * (int)headingDirection);
                 collider.MoveToPoint(position);
@@ -64,8 +65,18 @@ namespace MonkeyJumpGameModel
                     position.X = position.X < gameBounds.X ? gameBounds.X : gameBounds.Right;
                     position.Y = monkeyYLevel;
                     collider.MoveToPoint(position);
-                    isJumping = false;
+                    playerState = PlayerState.Climbing;
                     CurrentAnimation = climbAnimation;
+                }
+            }
+            else if (playerState == PlayerState.Dying)
+            {
+                position.Y += gameManager.GameSpeed * 2;
+                collider.MoveToPoint(position);
+
+                if (position.Y < gameBounds.Bottom)
+                {
+
                 }
             }
 
@@ -98,9 +109,9 @@ namespace MonkeyJumpGameModel
                     touchReleased = true;
                 }
             }
-            if (touchReleased && !isJumping)
+            if (touchReleased && playerState == PlayerState.Climbing)
             {
-                isJumping = true;
+                playerState = PlayerState.Jumping;
                 if(CurrentAnimation != jumpAnimation)
                     CurrentAnimation = jumpAnimation;
                 headingDirection = (Direction)((int)headingDirection * -1);
@@ -112,6 +123,13 @@ namespace MonkeyJumpGameModel
         {
             jumpAnimation.SpriteEffects = headingDirection == Direction.Left ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
             climbAnimation.SpriteEffects = headingDirection == Direction.Left ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+        }
+
+        public void KillPlayer()
+        {
+            playerState = PlayerState.Dying;
+            MediaPlayer.IsRepeating = false;
+            MediaPlayer.Play(gameManager.ResourceManager.RetreiveSong(ResourceManager.MONKEY_DEATH_SOUND));
         }
     }
 }
