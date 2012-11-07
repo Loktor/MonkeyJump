@@ -94,6 +94,7 @@ C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows 
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyDeath.xnb
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyCollectable.wma
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyDeath.wma
+C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\debug\rect.xnb
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Monkey Jump.xap
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\XapCacheFile.xml
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\AppManifest.xaml

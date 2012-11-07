@@ -11,28 +11,39 @@ namespace MonkeyJumpGameModel
         Rectangle collisionBounds;
         Size initialSize;
 
+        bool CenteredCollider { get; set; }
+
         public Rectangle CollisionBounds
         {
             get { return collisionBounds; }
             set { collisionBounds = value; }
         }
 
-        public Collider(Rectangle collisionBounds)
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="collisionBounds">Bounds of the collision rectangle</param>
+        /// <param name="centeredCollider">centers the collider to the specified position</param>
+        public Collider(Rectangle collisionBounds, bool centeredCollider)
         {
+            CenteredCollider = centeredCollider;
             initialSize = new Size(collisionBounds.Width, collisionBounds.Height);
             CollisionBounds = collisionBounds;
         }
 
-        public Collider(Vector2 position,Size size)
+        public Collider(Vector2 position, Size size, bool centeredCollider)
         {
+            CenteredCollider = centeredCollider;
             initialSize = size;
-            CollisionBounds = new Rectangle((int)position.X,(int)position.Y,size.Width,size.Height);
+            int posX = centeredCollider ? (int)position.X - size.Width / 2 : (int)position.X;
+            int posY = centeredCollider ? (int)position.Y - size.Height / 2 : (int)position.Y;
+            CollisionBounds = new Rectangle(posX,posY,size.Width,size.Height);
         }
 
         public void MoveToPoint(Vector2 position)
         {
-            collisionBounds.X = (int)position.X;
-            collisionBounds.Y = (int)position.Y;
+            collisionBounds.X = CenteredCollider ? (int)position.X - initialSize.Width / 2 : (int)position.X;
+            collisionBounds.Y = CenteredCollider ? (int)position.Y - initialSize.Height / 2 : (int)position.Y;
         }
 
         public void Scale(float scaleFactor)
@@ -49,7 +60,6 @@ namespace MonkeyJumpGameModel
 
         public bool CollidesWith(Collider collider)
         {
-
             return collisionBounds.Intersects(collider.CollisionBounds);
         }
 

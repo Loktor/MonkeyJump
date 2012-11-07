@@ -16,3 +16,4 @@ Content\game\monkeyCollectable.xnb
 Content\game\monkeyCollectable.wma
 Content\game\monkeyDeath.xnb
 Content\game\monkeyDeath.wma
+Content\debug\rect.xnb

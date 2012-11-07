@@ -139,6 +139,15 @@
       <Extra>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyDeath.wma</Extra>
       <Time>2012-11-06T12:34:02.3346+01:00</Time>
     </Item>
+    <Item>
+      <Source>debug\rect.png</Source>
+      <Name>debug\rect</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\debug\rect.xnb</Output>
+      <Time>2012-11-07T12:18:00.1104+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{DBBFCB7D-D4DC-4EB2-8964-C227425D5003}</ContentProjectGUID>

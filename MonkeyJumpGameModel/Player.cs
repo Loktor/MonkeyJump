@@ -17,7 +17,9 @@ namespace MonkeyJumpGameModel
         bool isJumping = false;
         Direction headingDirection;
         GameManager gameManager;
+        Rectangle gameBounds;
         Collider collider;
+        Size monkeySize = new Size(64, 64);
 
         public Collider Collider
         {
@@ -35,21 +37,23 @@ namespace MonkeyJumpGameModel
         {
             base.Init(gameBounds);
             gameManager = GameManager.Instance;
-            position.X = gameManager.GameBounds.X;
+            position.X = gameBounds.X;
             position.Y = 600;
             headingDirection = Direction.Left;
-            collider = new Collider(position, new Size(64,64));
-            collider.Scale(1.5f);
+            collider = new Collider(position, monkeySize,true);
+            this.gameBounds = gameBounds;
         }
 
         public override void Update(GameTime gameTime)
         {
             if (isJumping)
             {
-                position.X += (int)headingDirection * gameManager.GameSpeed;
+                position.X += (int)headingDirection * gameManager.GameSpeed * 2;
                 collider.MoveToPoint(position);
-                if (!Collider.IsInside(gameManager.GameBoundsCollider))
+                if (collider.CollisionBounds.X < gameBounds.X || collider.CollisionBounds.X > gameBounds.Right)
                 {
+                    position.X = collider.CollisionBounds.X < gameBounds.X ? gameBounds.X : gameBounds.Right;
+                    collider.MoveToPoint(position);
                     isJumping = false;
                     CurrentAnimation = climbAnimation;
                 }
