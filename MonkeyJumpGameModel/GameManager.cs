@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input.Touch;
 using Microsoft.Xna.Framework.Media;
+using Microsoft.Xna.Framework.Audio;
 
 namespace MonkeyJumpGameModel
 {
@@ -14,7 +15,11 @@ namespace MonkeyJumpGameModel
         private List<GameEntity> decorationEntities;
         private List<GameEntityGenerator> gameEntityGenerators;
         private LoopingBackground loopingBackground;
+        private LoopingWaves loopingWavesRight;
+        private LoopingWaves loopingWavesLeft;
+        private LoopingWaves loopingWavesLow;
         private Player player;
+        private Shark shark;
 
         public Viewport Screen { get; set; }
         public int GameSpeed { get; set; }
@@ -61,14 +66,20 @@ namespace MonkeyJumpGameModel
             ResourceManager = new ResourceManager();
             Rectangle tileSave = screen.TitleSafeArea;
             Screen = screen;
-            GameSpeed = 10;
+            GameSpeed = 5;
             // Move the GameBounds away from the sides because there are the palms
             GameBounds = new Rectangle(tileSave.X + BORDER_WIDTH, tileSave.Y, tileSave.Width - BORDER_WIDTH * 2, tileSave.Height);
             collidableGameEntities = new List<GameEntity>();
             decorationEntities = new List<GameEntity>();
             loopingBackground = new LoopingBackground();
+            loopingWavesRight = new LoopingWaves(true, false);
+            loopingWavesLeft = new LoopingWaves(false, false);
+            loopingWavesLow = new LoopingWaves(false, true);
 
             player = new Player();
+            shark = new Shark();
+            decorationEntities.Add(shark);
+
             InitGameEntityGenerators();
         }
 
@@ -82,6 +93,9 @@ namespace MonkeyJumpGameModel
         {
             List<GameEntity> entitiesToRemove = new List<GameEntity>();
             loopingBackground.Update(gameTime);
+            loopingWavesRight.Update(gameTime);
+            loopingWavesLeft.Update(gameTime);
+            loopingWavesLow.Update(gameTime);
 
             foreach(GameEntity entity in collidableGameEntities)
             {
@@ -115,7 +129,10 @@ namespace MonkeyJumpGameModel
 
         public void DrawEntities(SpriteBatch spriteBatch, GameTime gameTime)
         {
+            loopingWavesLeft.Draw(spriteBatch, gameTime);
             loopingBackground.Draw(spriteBatch,gameTime);
+            
+            
 
             foreach (GameEntity entity in collidableGameEntities)
             {
@@ -127,12 +144,16 @@ namespace MonkeyJumpGameModel
                 }
 #endif
             }
+
+            player.Draw(spriteBatch, gameTime);
+            loopingWavesRight.Draw(spriteBatch, gameTime);
+
             foreach (GameEntity entity in decorationEntities)
             {
                 entity.Draw(spriteBatch, gameTime);
             }
 
-            player.Draw(spriteBatch, gameTime);
+            loopingWavesLow.Draw(spriteBatch, gameTime);
             spriteBatch.DrawString(ResourceManager.RetreiveFont(ResourceManager.SCORE_FONT), SCORE_TEXT + player.PlayerScore, scorePos, Color.GhostWhite);
         }
 
@@ -145,11 +166,15 @@ namespace MonkeyJumpGameModel
             }
 #endif
             loopingBackground.LoadTextures(content);
+            loopingWavesRight.LoadTextures(content);
+            loopingWavesLeft.LoadTextures(content);
+            loopingWavesLow.LoadTextures(content);
 
 
             // Load resuable textures
-            ResourceManager.Add(ResourceManager.MONKEY_DEATH_SOUND, content.Load<Song>(ResourceManager.MONKEY_DEATH_SOUND));
+            ResourceManager.Add(ResourceManager.MONKEY_DEATH_SOUND, content.Load<SoundEffect>(ResourceManager.MONKEY_DEATH_SOUND));
             ResourceManager.Add(ResourceManager.COCONUT_PATH,content.Load<Texture2D>(ResourceManager.COCONUT_PATH));
+            ResourceManager.Add(ResourceManager.SHARK_PATH, content.Load<Texture2D>(ResourceManager.SHARK_PATH));
             ResourceManager.Add(ResourceManager.SCORE_FONT, content.Load<SpriteFont>(ResourceManager.SCORE_FONT));
 
             foreach (GameEntity entity in collidableGameEntities)
@@ -167,6 +192,9 @@ namespace MonkeyJumpGameModel
         public void InitEntities()
         {
             loopingBackground.Init(GameBounds);
+            loopingWavesRight.Init(GameBounds);
+            loopingWavesLeft.Init(GameBounds);
+            loopingWavesLow.Init(GameBounds);
 
             foreach (GameEntity entity in collidableGameEntities)
             {

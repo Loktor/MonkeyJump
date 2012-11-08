@@ -64,6 +64,9 @@
     <Compile Include="Coconut.cs" />
     <Compile Include="CoconutGenerator.cs" />
     <Compile Include="Collider.cs" />
+    <Compile Include="LoopingWaves.cs" />
+    <Compile Include="DrawableRotateEntity.cs" />
+    <Compile Include="Shark.cs" />
     <Compile Include="Direction.cs" />
     <Compile Include="DrawableEntity.cs" />
     <Compile Include="GameEntity.cs" />

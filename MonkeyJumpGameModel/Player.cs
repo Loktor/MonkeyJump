@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
 using Microsoft.Xna.Framework.Media;
+using Microsoft.Xna.Framework.Audio;
 
 namespace MonkeyJumpGameModel
 {
@@ -81,7 +82,7 @@ namespace MonkeyJumpGameModel
             }
             else if (playerState == PlayerState.Dying)
             {
-                position.Y += gameManager.GameSpeed * 2;
+                position.Y += gameManager.GameSpeed * 1.5f;
                 collider.MoveToPoint(position);
 
                 if (position.Y < gameBounds.Bottom)
@@ -137,9 +138,15 @@ namespace MonkeyJumpGameModel
 
         public void KillPlayer()
         {
-            playerState = PlayerState.Dying;
-            MediaPlayer.IsRepeating = false;
-            MediaPlayer.Play(gameManager.ResourceManager.RetreiveSong(ResourceManager.MONKEY_DEATH_SOUND));
+            if (playerState != PlayerState.Dying)
+            {
+                playerState = PlayerState.Dying;
+                climbAnimation.Rotation = headingDirection == Direction.Left ? 1.57f : 4.71f;
+                CurrentAnimation = climbAnimation;
+
+                SoundEffect dieSound = gameManager.ResourceManager.RetreiveSong(ResourceManager.MONKEY_DEATH_SOUND);
+                dieSound.Play();
+            }
         }
     }
 }

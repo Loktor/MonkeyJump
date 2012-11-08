@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Media;
+using Microsoft.Xna.Framework.Audio;
 
 namespace MonkeyJumpGameModel
 {
@@ -13,11 +14,12 @@ namespace MonkeyJumpGameModel
     public class ResourceManager
     {
         public const string COCONUT_PATH = "game/coconut";
+        public const string SHARK_PATH = "game/shark";
         public const string MONKEY_DEATH_SOUND = "game/monkeyDeath";
         public const string SCORE_FONT = "game/scoreFont";
 
         Dictionary<String, Texture2D> textureDictionary = new Dictionary<string, Texture2D>();
-        Dictionary<String, Song> songDictionary = new Dictionary<string, Song>();
+        Dictionary<String, SoundEffect> soundDictionary = new Dictionary<string, SoundEffect>();
         Dictionary<String, SpriteFont> fontDictionary = new Dictionary<string, SpriteFont>();
 
         public void Add(String key, Texture2D value)
@@ -29,13 +31,13 @@ namespace MonkeyJumpGameModel
             textureDictionary.Add(key, value);
         }
 
-        public void Add(String key, Song value)
+        public void Add(String key, SoundEffect value)
         {
-            if (songDictionary.ContainsKey(key))
+            if (soundDictionary.ContainsKey(key))
             {
                 throw new InvalidOperationException("Key is already in dictionary");
             }
-            songDictionary.Add(key, value);
+            soundDictionary.Add(key, value);
         }
 
         public void Add(String key, SpriteFont value)
@@ -56,13 +58,13 @@ namespace MonkeyJumpGameModel
             return textureDictionary[key];
         }
 
-        public Song RetreiveSong(String key)
+        public SoundEffect RetreiveSong(String key)
         {
-            if (!songDictionary.ContainsKey(key))
+            if (!soundDictionary.ContainsKey(key))
             {
                 throw new InvalidOperationException("Key not in dictionary");
             }
-            return songDictionary[key];
+            return soundDictionary[key];
         }
 
         public SpriteFont RetreiveFont(String key)
