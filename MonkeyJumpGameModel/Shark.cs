@@ -14,8 +14,10 @@ namespace MonkeyJumpGameModel
         private Rectangle gameBounds;
         private Direction headingDirection;
         private Size sharkSize = new Size(160, 80);
+        private int sharkYPos = 750;
 
-        public Shark() : base(new Size(160,80))
+        public Shark()
+            : base(new Size(160, 80))
         {
         }
        
@@ -25,19 +27,19 @@ namespace MonkeyJumpGameModel
             base.Init(gameBounds);
             gameManager = GameManager.Instance;
             this.gameBounds = gameBounds;
-            position.X = 0;
-            position.Y = 780;
+            position.X = 0-sharkSize.Width;
+            position.Y = sharkYPos;
             texture = gameManager.ResourceManager.RetreiveTexture(ResourceManager.SHARK_PATH);
             headingDirection = Direction.Right;
         }
 
         public override void Update(GameTime gameTime)
         {
-            position.X += (int)headingDirection * gameManager.GameSpeed / 2;
-            Rotation = (float)Math.Sin((position.X * 5 / 100) - 90) / 3 - 0.1f * (int)headingDirection;
-            position.Y = 780 + (-(float)Math.Sin(position.X * 5 / 100) * 100) / 4;
+            position.X += (int)headingDirection * gameManager.GameSpeed/2;
+            Rotation = (float)Math.Sin((position.X * 5 / 100 - 45) ) / 3 - 0.2f * (int)headingDirection;
+            position.Y = sharkYPos + (-(float)Math.Sin(position.X * 5 / 100) * 100) / 4;
 
-            if (position.X < gameBounds.X-sharkSize.Width || position.X > gameBounds.Right+sharkSize.Width)
+            if (position.X < gameBounds.X-sharkSize.Width*1.5f || position.X > gameBounds.Right+sharkSize.Width/2)
             {
                 headingDirection = (Direction)((int)headingDirection * -1);
                 SpriteEffects = headingDirection == Direction.Right ? SpriteEffects.None : SpriteEffects.FlipHorizontally;

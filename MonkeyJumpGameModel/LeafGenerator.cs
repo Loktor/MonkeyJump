@@ -6,10 +6,10 @@ using Microsoft.Xna.Framework;
 
 namespace MonkeyJumpGameModel
 {
-    public class CoconutGenerator : GameEntityGenerator
+    public class LeafGenerator : GameEntityGenerator
     {
         int elapsedTime = 0;
-        int generationTime = 1000;
+        int generationTime = 3000;
         private Random rand = new Random(DateTime.Now.Millisecond);
 
         public override List<GameEntity> GenerateEntities(GameTime gameTime)
@@ -20,8 +20,8 @@ namespace MonkeyJumpGameModel
             while (elapsedTime > generationTime)
             {
                 elapsedTime -= generationTime;
-                generatedEntities.Add(CreateRandomCoconut());
-                generationTime = 1000 + rand.Next(2000);
+                generatedEntities.Add(CreateRandomLeaf());
+                generationTime = 3000 + rand.Next(2000);
             }
             if (generatedEntities.Count > 0)
             {
@@ -31,13 +31,13 @@ namespace MonkeyJumpGameModel
         }
 
 
-        public Coconut CreateRandomCoconut()
+        public Leaf CreateRandomLeaf()
         {
-            Coconut coconut = new Coconut();
+            Leaf leaf = new Leaf();
             GameManager gameManager = GameManager.Instance;
-            coconut.texture = gameManager.ResourceManager.RetreiveTexture(ResourceManager.COCONUT_PATH);
-            coconut.Init(gameManager.GameBounds);
-            return coconut;
+            leaf.texture = gameManager.ResourceManager.RetreiveTexture(ResourceManager.LEAF_PATH);
+            leaf.Init(gameManager.GameBounds);
+            return leaf;
         }
     }
 }

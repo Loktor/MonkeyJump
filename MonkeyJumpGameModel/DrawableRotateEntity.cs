@@ -32,7 +32,7 @@ namespace MonkeyJumpGameModel
             SpriteEffects = SpriteEffects.None;
             FrameSize = size;
             sourceRect = new Rectangle(0, 0, FrameSize.Width, FrameSize.Height);
-            origin = new Vector2(sourceRect.Width / 2, sourceRect.Height / 2);
+            origin = new Vector2(0, 0);
         }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)

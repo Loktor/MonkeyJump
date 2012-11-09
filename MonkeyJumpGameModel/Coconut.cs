@@ -19,7 +19,7 @@ namespace MonkeyJumpGameModel
             base.Init(gameBounds);
             gameManager = GameManager.Instance;
             position.X = new Random(DateTime.Now.Millisecond).Next(gameBounds.Width - coconutSize.Width) + gameBounds.X;
-            position.Y = 0;
+            position.Y = -coconutSize.Height;
             Collider = new Collider(position, coconutSize,false);
         }
 

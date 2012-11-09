@@ -13,6 +13,7 @@ namespace MonkeyJumpGameModel
     /// </summary>
     public class ResourceManager
     {
+        public const string LEAF_PATH = "game/leaf";
         public const string COCONUT_PATH = "game/coconut";
         public const string SHARK_PATH = "game/shark";
         public const string MONKEY_DEATH_SOUND = "game/monkeyDeath";

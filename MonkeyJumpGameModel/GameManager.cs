@@ -31,7 +31,7 @@ namespace MonkeyJumpGameModel
         private Vector2 scorePos = new Vector2(300, 10);
         private const String SCORE_TEXT = "Score: ";
 #if DEBUG
-        private bool showBounds = true;
+        private bool showBounds = false;
         private const String BOUNDS_RECT_TEX_KEY = "debug/rect";
 #endif
 
@@ -87,6 +87,7 @@ namespace MonkeyJumpGameModel
         {
             gameEntityGenerators = new List<GameEntityGenerator>();
             gameEntityGenerators.Add(new CoconutGenerator());
+            gameEntityGenerators.Add(new LeafGenerator());
         }
     
         public void UpdateEntities(GameTime gameTime)
@@ -173,7 +174,8 @@ namespace MonkeyJumpGameModel
 
             // Load resuable textures
             ResourceManager.Add(ResourceManager.MONKEY_DEATH_SOUND, content.Load<SoundEffect>(ResourceManager.MONKEY_DEATH_SOUND));
-            ResourceManager.Add(ResourceManager.COCONUT_PATH,content.Load<Texture2D>(ResourceManager.COCONUT_PATH));
+            ResourceManager.Add(ResourceManager.LEAF_PATH, content.Load<Texture2D>(ResourceManager.LEAF_PATH));
+            ResourceManager.Add(ResourceManager.COCONUT_PATH, content.Load<Texture2D>(ResourceManager.COCONUT_PATH));
             ResourceManager.Add(ResourceManager.SHARK_PATH, content.Load<Texture2D>(ResourceManager.SHARK_PATH));
             ResourceManager.Add(ResourceManager.SCORE_FONT, content.Load<SpriteFont>(ResourceManager.SCORE_FONT));
 
