@@ -26,7 +26,7 @@ namespace MonkeyJumpGameModel
             else
             {
                 Console.WriteLine("Speed: " + gameTime.ElapsedGameTime.Milliseconds);
-                position.Y += GameManager.Instance.GameSpeed;
+                position.Y += gameTime.ElapsedGameTime.Milliseconds / 10 * GameManager.Instance.GameSpeed;//GameManager.Instance.GameSpeed;
             }
         }
 

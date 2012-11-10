@@ -109,9 +109,3 @@ D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debu
 D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\highWavesLeft.xnb
 D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\highWavesRight.xnb
 D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\lowWaves.xnb
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Monkey Jump.xap
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\XapCacheFile.xml
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\AppManifest.xaml
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\WMAppManifest.xml.g
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\WMAppManifest.xml
-bin\Windows Phone\Debug\

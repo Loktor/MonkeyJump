@@ -67,7 +67,7 @@ namespace MonkeyJumpGameModel
             }
             if (playerState == PlayerState.Jumping)
             {
-                position.X += (int)headingDirection * gameManager.GameSpeed * 2;
+                position.X += (int)headingDirection * 8;
                 position.Y = position.X > gameYCenter ? position.Y + (1 * ((position.X - gameYCenter) / monkeyJumpGravity) * (int)headingDirection) : position.Y - (1 * ((gameYCenter - position.X) / monkeyJumpGravity) * (int)headingDirection);
                 collider.MoveToPoint(position);
 
@@ -82,7 +82,7 @@ namespace MonkeyJumpGameModel
             }
             else if (playerState == PlayerState.Dying)
             {
-                position.Y += gameManager.GameSpeed * 1.5f;
+                position.Y += gameTime.ElapsedGameTime.Milliseconds / 10 * GameManager.Instance.GameSpeed * 1.5f;
                 collider.MoveToPoint(position);
 
                 if (position.Y < gameBounds.Bottom)

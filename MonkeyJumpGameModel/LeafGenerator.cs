@@ -21,6 +21,10 @@ namespace MonkeyJumpGameModel
             {
                 elapsedTime -= generationTime;
                 generatedEntities.Add(CreateRandomLeaf());
+                if (rand.Next(2) == 0)
+                {
+                    generatedEntities.Add(CreateRandomBanana((Leaf)generatedEntities[generatedEntities.Count - 1]));
+                }
                 generationTime = 3000 + rand.Next(2000);
             }
             if (generatedEntities.Count > 0)
@@ -38,6 +42,18 @@ namespace MonkeyJumpGameModel
             leaf.texture = gameManager.ResourceManager.RetreiveTexture(ResourceManager.LEAF_PATH);
             leaf.Init(gameManager.GameBounds);
             return leaf;
+        }
+
+        public Banana CreateRandomBanana(Leaf leaf)
+        {
+            Banana banana = new Banana();
+            GameManager gameManager = GameManager.Instance;
+            banana.texture = gameManager.ResourceManager.RetreiveTexture(ResourceManager.BANANA_PATH);
+            banana.Init(gameManager.GameBounds);
+
+            banana.position.X = leaf.isLeft ? leaf.position.X + leaf.FrameSize.Width - 30 : leaf.position.X;
+            banana.SpriteEffects = leaf.SpriteEffects;
+            return banana;
         }
     }
 }
