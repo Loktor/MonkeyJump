@@ -9,7 +9,7 @@ namespace MonkeyJumpGameModel
     public class CoconutGenerator : GameEntityGenerator
     {
         int elapsedTime = 0;
-        int generationTime = 1000;
+        int generationTime = 3000;
         private Random rand = new Random(DateTime.Now.Millisecond);
 
         public override List<GameEntity> GenerateEntities(GameTime gameTime)
@@ -21,7 +21,7 @@ namespace MonkeyJumpGameModel
             {
                 elapsedTime -= generationTime;
                 generatedEntities.Add(CreateRandomCoconut());
-                generationTime = 1000 + rand.Next(2000);
+                generationTime = 3000 + rand.Next(2000);
             }
             if (generatedEntities.Count > 0)
             {
