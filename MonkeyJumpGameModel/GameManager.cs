@@ -31,7 +31,7 @@ namespace MonkeyJumpGameModel
         private Vector2 scorePos = new Vector2(300, 10);
         private const String SCORE_TEXT = "Score: ";
 #if DEBUG
-        private bool showBounds = false;
+        private bool showBounds = true;
         private const String BOUNDS_RECT_TEX_KEY = "debug/rect";
 #endif
 
@@ -132,8 +132,6 @@ namespace MonkeyJumpGameModel
         {
             loopingWavesLeft.Draw(spriteBatch, gameTime);
             loopingBackground.Draw(spriteBatch,gameTime);
-            
-            
 
             foreach (GameEntity entity in collidableGameEntities)
             {
@@ -147,6 +145,12 @@ namespace MonkeyJumpGameModel
             }
 
             player.Draw(spriteBatch, gameTime);
+#if DEBUG
+            if (showBounds)
+            {
+                spriteBatch.Draw(ResourceManager.RetreiveTexture(BOUNDS_RECT_TEX_KEY), ((ICollidable)player).Collider.CollisionBounds, Color.White);
+            }
+#endif
             loopingWavesRight.Draw(spriteBatch, gameTime);
 
             foreach (GameEntity entity in decorationEntities)
