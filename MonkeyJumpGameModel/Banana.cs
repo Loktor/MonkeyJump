@@ -8,16 +8,14 @@ using Microsoft.Xna.Framework;
 
 namespace MonkeyJumpGameModel
 {
-    public class Leaf : DrawableRotateEntity, ICollidable
+    public class Banana : DrawableRotateEntity, ICollidable
     {
         private GameManager gameManager;
-        private Size leafSize = new Size(154, 64);
+        private Size bananaSize = new Size(32, 76);
         public Collider Collider { get; set; }
 
-        public bool isLeft;
-
-        public Leaf()
-            : base(new Size(154, 64))
+        public Banana()
+            : base(new Size(32, 76))
         {
         }
 
@@ -25,12 +23,9 @@ namespace MonkeyJumpGameModel
         {
             base.Init(gameBounds);
             gameManager = GameManager.Instance;
-
-            isLeft = new Random().Next(2) == 0;
-            SpriteEffects = isLeft ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
-            position.X = isLeft ? gameBounds.X / 2 : gameBounds.Right + gameBounds.X / 2 - leafSize.Width;
-            position.Y = -(leafSize.Height +70);
-            Collider = new Collider(position, leafSize,false);
+            //position.X = new Random(DateTime.Now.Millisecond).Next(gameBounds.Width - bananaSize.Width) + gameBounds.X;
+            position.Y = -bananaSize.Height;
+            Collider = new Collider(position, bananaSize, false);
         }
 
         public override void Update(GameTime gameTime)

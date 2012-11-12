@@ -18,14 +18,14 @@ namespace MonkeyJumpGameModel
         {
             base.Init(gameBounds);
             gameManager = GameManager.Instance;
-            position.X = new Random(DateTime.Now.Millisecond).Next(gameBounds.Width - coconutSize.Width) + gameBounds.X;
+            position.X = new Random(DateTime.Now.Millisecond).Next(gameBounds.Width - 128) + gameBounds.X + 64;
             position.Y = -coconutSize.Height;
             Collider = new Collider(position, coconutSize,false);
         }
 
         public override void Update(GameTime gameTime)
         {
-            position.Y += gameManager.GameSpeed * 1.3f;
+            position.Y += gameTime.ElapsedGameTime.Milliseconds / 10 * GameManager.Instance.GameSpeed * 1.3f;
             Collider.MoveToPoint(position);
         }
     }

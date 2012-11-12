@@ -35,9 +35,9 @@ namespace MonkeyJumpGameModel
 
         public override void Update(GameTime gameTime)
         {
-            position.X += (int)headingDirection * gameManager.GameSpeed/2;
+            position.X += (int)headingDirection * 2;
             Rotation = (float)Math.Sin((position.X * 5 / 100 - 45) ) / 3 - 0.2f * (int)headingDirection;
-            position.Y = sharkYPos + (-(float)Math.Sin(position.X * 5 / 100) * 100) / 4;
+            position.Y = sharkYPos + (-(float)Math.Sin(position.X * 5 / 100) * 100) / 4 + 25 * (int)headingDirection;
 
             if (position.X < gameBounds.X-sharkSize.Width*1.5f || position.X > gameBounds.Right+sharkSize.Width/2)
             {

@@ -34,7 +34,7 @@ namespace MonkeyJumpGameModel
             {
                 Console.WriteLine("Speed: " + gameTime.ElapsedGameTime.Milliseconds);
                 float waveSpeed = isRight ? 2.5f : isLow ? 2f : 3f;
-                position.X += GameManager.Instance.GameSpeed/waveSpeed * ((isRight) ? 1 : -1);
+                position.X += 3/waveSpeed * ((isRight) ? 1 : -1);
             }
         }
 

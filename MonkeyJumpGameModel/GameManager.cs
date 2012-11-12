@@ -22,7 +22,7 @@ namespace MonkeyJumpGameModel
         private Shark shark;
 
         public Viewport Screen { get; set; }
-        public int GameSpeed { get; set; }
+        public float GameSpeed { get; set; }
         public Rectangle GameBounds { get; set; }
         public ResourceManager ResourceManager { get; set; }
 
@@ -30,6 +30,9 @@ namespace MonkeyJumpGameModel
         private const int BORDER_WIDTH = 60;
         private Vector2 scorePos = new Vector2(300, 10);
         private const String SCORE_TEXT = "Score: ";
+
+        private int elapsedTime = 0;
+        private int increaseGameSpeedThreshold = 10000;
 #if DEBUG
         private bool showBounds = true;
         private const String BOUNDS_RECT_TEX_KEY = "debug/rect";
@@ -66,9 +69,9 @@ namespace MonkeyJumpGameModel
             ResourceManager = new ResourceManager();
             Rectangle tileSave = screen.TitleSafeArea;
             Screen = screen;
-            GameSpeed = 5;
+            GameSpeed = 1;
             // Move the GameBounds away from the sides because there are the palms
-            GameBounds = new Rectangle(tileSave.X + BORDER_WIDTH, tileSave.Y, tileSave.Width - BORDER_WIDTH * 2, tileSave.Height);
+            GameBounds = new Rectangle(tileSave.X + BORDER_WIDTH, tileSave.Y-200, tileSave.Width - BORDER_WIDTH * 2, tileSave.Height+200);
             collidableGameEntities = new List<GameEntity>();
             decorationEntities = new List<GameEntity>();
             loopingBackground = new LoopingBackground();
@@ -107,7 +110,18 @@ namespace MonkeyJumpGameModel
                 }
                 else if (player.Collider.CollidesWith(((ICollidable)entity).Collider))
                 {
-                    player.KillPlayer();
+                    if(entity.GetType() == typeof(Banana)){
+
+                        entitiesToRemove.Add(entity);
+
+                        SoundEffect collectSound = ResourceManager.RetreiveSong(ResourceManager.MONKEY_COLLECTABLE_SOUND);
+                        collectSound.Play();
+
+                        player.PlayerScore += 50;                        
+
+                    }else{
+                        player.KillPlayer();
+                    }
                 }
             }
             foreach (GameEntity entity in decorationEntities)
@@ -125,6 +139,17 @@ namespace MonkeyJumpGameModel
             foreach (GameEntity entityToRemove in entitiesToRemove)
             {
                 collidableGameEntities.Remove(entityToRemove);
+            }
+
+            elapsedTime += gameTime.ElapsedGameTime.Milliseconds;
+
+            if (elapsedTime > increaseGameSpeedThreshold)
+            {
+                if (GameSpeed < 5)
+                {
+                    GameSpeed *= 1.1f;
+                }
+                elapsedTime = 0;
             }
         }
 
@@ -151,6 +176,7 @@ namespace MonkeyJumpGameModel
                 spriteBatch.Draw(ResourceManager.RetreiveTexture(BOUNDS_RECT_TEX_KEY), ((ICollidable)player).Collider.CollisionBounds, Color.White);
             }
 #endif
+
             loopingWavesRight.Draw(spriteBatch, gameTime);
 
             foreach (GameEntity entity in decorationEntities)
@@ -178,6 +204,8 @@ namespace MonkeyJumpGameModel
 
             // Load resuable textures
             ResourceManager.Add(ResourceManager.MONKEY_DEATH_SOUND, content.Load<SoundEffect>(ResourceManager.MONKEY_DEATH_SOUND));
+            ResourceManager.Add(ResourceManager.MONKEY_COLLECTABLE_SOUND, content.Load<SoundEffect>(ResourceManager.MONKEY_COLLECTABLE_SOUND));
+            ResourceManager.Add(ResourceManager.BANANA_PATH, content.Load<Texture2D>(ResourceManager.BANANA_PATH));
             ResourceManager.Add(ResourceManager.LEAF_PATH, content.Load<Texture2D>(ResourceManager.LEAF_PATH));
             ResourceManager.Add(ResourceManager.COCONUT_PATH, content.Load<Texture2D>(ResourceManager.COCONUT_PATH));
             ResourceManager.Add(ResourceManager.SHARK_PATH, content.Load<Texture2D>(ResourceManager.SHARK_PATH));
