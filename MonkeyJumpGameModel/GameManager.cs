@@ -110,15 +110,14 @@ namespace MonkeyJumpGameModel
                 }
                 else if (player.Collider.CollidesWith(((ICollidable)entity).Collider))
                 {
-                    if(entity.GetType() == typeof(Banana)){
+                    if(entity is ICollectable){
 
                         entitiesToRemove.Add(entity);
 
                         SoundEffect collectSound = ResourceManager.RetreiveSong(ResourceManager.MONKEY_COLLECTABLE_SOUND);
                         collectSound.Play();
 
-                        player.PlayerScore += 50;                        
-
+                        player.PlayerScore += (entity as ICollectable).Score;                        
                     }else{
                         player.KillPlayer();
                     }

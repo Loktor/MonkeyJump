@@ -1,15 +1,15 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace MonkeyJumpGameModel
 {
-    public enum PlayerState
+    public interface ICollectable
     {
-        Climbing,
-        Jumping,
-        Dying,
-        Dead
+        int Score
+        {
+            get;
+        }
     }
 }

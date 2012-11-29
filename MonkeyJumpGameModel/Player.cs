@@ -22,7 +22,7 @@ namespace MonkeyJumpGameModel
         private Rectangle gameBounds;
         private int gameYCenter;
         private Collider collider;
-        private Size monkeySize = new Size(64, 64);
+        private Size monkeySize = new Size(56, 56);
         private int monkeyYLevel = 600;
         private int playerScore = 0;
         // Playable values between 15 and 80. Higher -> more gravity, lower jump

@@ -17,7 +17,7 @@
   <Class Name="MonkeyJumpGameModel.GameManager">
     <Position X="8" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAIBBCAAAAAAAAgBAAQAAKAAABAAAAJQQCAAgAAAAA=</HashCode>
+      <HashCode>AAAIBFCQBQAkAAAhBAAQEAKCEABBAAABRRCAIgAAAAg=</HashCode>
       <FileName>GameManager.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -41,14 +41,14 @@
   <Class Name="MonkeyJumpGameModel.Collider">
     <Position X="10" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AGAEAAAAEAAAAAAAAAIABEAAAAAAQAAAAAAAAAAQAAA=</HashCode>
+      <HashCode>AGAEAAAAEAAAAAAAAAIABEAAAAAAQAEAAAAAAAAQAAA=</HashCode>
       <FileName>Collider.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MonkeyJumpGameModel.Player">
     <Position X="3.25" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEQkCgCAIAAAAgAAAAAAAAAAAAAAAAAQCAACEAAAAAA=</HashCode>
+      <HashCode>AEQkCACAKAAABhCAAAAAAAAAAAAAAIAQGAACFAAAAIA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />

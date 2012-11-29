@@ -8,15 +8,24 @@ using Microsoft.Xna.Framework;
 
 namespace MonkeyJumpGameModel
 {
-    public class Banana : DrawableRotateEntity, ICollidable
+    public class Banana : DrawableRotateEntity, ICollidable, ICollectable
     {
         private GameManager gameManager;
         private Size bananaSize = new Size(32, 76);
+        private const int SCORE_VALUE = 100;
         public Collider Collider { get; set; }
 
         public Banana()
             : base(new Size(32, 76))
         {
+        }
+
+        public int Score
+        {
+            get
+            {
+                return SCORE_VALUE;
+            }
         }
 
         public override void Init(Rectangle gameBounds)

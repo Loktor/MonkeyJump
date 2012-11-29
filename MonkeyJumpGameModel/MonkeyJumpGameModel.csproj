@@ -65,6 +65,7 @@
     <Compile Include="CoconutGenerator.cs" />
     <Compile Include="Collider.cs" />
     <Compile Include="Banana.cs" />
+    <Compile Include="ICollectable.cs" />
     <Compile Include="Leaf.cs" />
     <Compile Include="LeafGenerator.cs" />
     <Compile Include="LoopingWaves.cs" />
