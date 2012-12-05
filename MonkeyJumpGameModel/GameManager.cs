@@ -28,7 +28,7 @@ namespace MonkeyJumpGameModel
         private Vector2 scorePos = new Vector2(300, 10);
         private const String SCORE_TEXT = "Score: ";
 
-        private int elapsedTime = 0;
+        private int elapsedTimeSinceSpeedUpdate = 0;
         private int increaseGameSpeedThreshold = 10000;
 #if DEBUG
         private bool showBounds = true;
@@ -159,9 +159,9 @@ namespace MonkeyJumpGameModel
                 collidableGameEntities.Remove(entityToRemove);
             }
 
-            elapsedTime += gameTime.ElapsedGameTime.Milliseconds;
+            elapsedTimeSinceSpeedUpdate += gameTime.ElapsedGameTime.Milliseconds;
 
-            UpdateGameSpeed(elapsedTime);
+            UpdateGameSpeed();
         }
 
         public void DrawEntities(SpriteBatch spriteBatch, GameTime gameTime)
@@ -257,15 +257,15 @@ namespace MonkeyJumpGameModel
             player.HandleInput(touch);
         }
 
-        private void UpdateGameSpeed(int elapsedTime)
+        private void UpdateGameSpeed()
         {
-            if (elapsedTime > increaseGameSpeedThreshold)
+            if (elapsedTimeSinceSpeedUpdate > increaseGameSpeedThreshold)
             {
                 if (GameSpeed < 5)
                 {
-                    GameSpeed *= 1.1f;
+                    GameSpeed += 0.2f;
                 }
-                elapsedTime = 0;
+                elapsedTimeSinceSpeedUpdate = 0;
             }
         }
     }
