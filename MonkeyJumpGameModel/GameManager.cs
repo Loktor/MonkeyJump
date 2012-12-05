@@ -20,13 +20,10 @@ namespace MonkeyJumpGameModel
         private LoopingWaves loopingWavesLow;
         private Player player;
         private Shark shark;
-
-        public Viewport Screen { get; set; }
-        public float GameSpeed { get; set; }
-        public Rectangle GameBounds { get; set; }
-        public ResourceManager ResourceManager { get; set; }
+        private GameState gameState = GameState.NotCreated;
 
         private static GameManager instance;
+        private SaveGameManager saveGameManager;
         private const int BORDER_WIDTH = 60;
         private Vector2 scorePos = new Vector2(300, 10);
         private const String SCORE_TEXT = "Score: ";
@@ -37,6 +34,11 @@ namespace MonkeyJumpGameModel
         private bool showBounds = true;
         private const String BOUNDS_RECT_TEX_KEY = "debug/rect";
 #endif
+
+        public Viewport Screen { get; set; }
+        public float GameSpeed { get; set; }
+        public Rectangle GameBounds { get; set; }
+        public ResourceManager ResourceManager { get; set; }
 
         public static GameManager CreateNewGameManager(Viewport screen)
         {
@@ -68,6 +70,7 @@ namespace MonkeyJumpGameModel
         {
             ResourceManager = new ResourceManager();
             Rectangle tileSave = screen.TitleSafeArea;
+            saveGameManager = SaveGameManager.Instance;
             Screen = screen;
             GameSpeed = 1;
             // Move the GameBounds away from the sides because there are the palms
@@ -84,6 +87,7 @@ namespace MonkeyJumpGameModel
             decorationEntities.Add(shark);
 
             InitGameEntityGenerators();
+            gameState = GameState.Running;
         }
 
         private void InitGameEntityGenerators()
@@ -95,6 +99,21 @@ namespace MonkeyJumpGameModel
     
         public void UpdateEntities(GameTime gameTime)
         {
+            if (gameState == GameState.Paused || gameState == GameState.Over)
+            {
+                return;
+            }
+            if (player.PlayerState == PlayerState.Dead)
+            {
+                if (saveGameManager.Highscore.CheckIfNewHighscore(player.PlayerScore))
+                {
+                    saveGameManager.Highscore.AddScore("test", player.PlayerScore);
+                    saveGameManager.SaveHighscoreList();
+                    gameState = GameState.Over;
+                }
+                return;
+            }
+
             List<GameEntity> entitiesToRemove = new List<GameEntity>();
             loopingBackground.Update(gameTime);
             loopingWavesRight.Update(gameTime);
@@ -129,7 +148,7 @@ namespace MonkeyJumpGameModel
             }
 
             player.Update(gameTime);
-            
+
             foreach (GameEntityGenerator generator in gameEntityGenerators)
             {
                 collidableGameEntities.AddRange(generator.GenerateEntities(gameTime));
@@ -142,14 +161,7 @@ namespace MonkeyJumpGameModel
 
             elapsedTime += gameTime.ElapsedGameTime.Milliseconds;
 
-            if (elapsedTime > increaseGameSpeedThreshold)
-            {
-                if (GameSpeed < 5)
-                {
-                    GameSpeed *= 1.1f;
-                }
-                elapsedTime = 0;
-            }
+            UpdateGameSpeed(elapsedTime);
         }
 
         public void DrawEntities(SpriteBatch spriteBatch, GameTime gameTime)
@@ -243,6 +255,18 @@ namespace MonkeyJumpGameModel
         public void HandleInput(TouchCollection touch)
         {
             player.HandleInput(touch);
+        }
+
+        private void UpdateGameSpeed(int elapsedTime)
+        {
+            if (elapsedTime > increaseGameSpeedThreshold)
+            {
+                if (GameSpeed < 5)
+                {
+                    GameSpeed *= 1.1f;
+                }
+                elapsedTime = 0;
+            }
         }
     }
 }

@@ -9,6 +9,7 @@
 
 #region Using Statements
 using Microsoft.Xna.Framework;
+using Monkey_Jump.Screens;
 #endregion
 
 namespace Monkey_Jump
@@ -30,14 +31,17 @@ namespace Monkey_Jump
             // Create our menu entries.
             MenuEntry playGameMenuEntry = new MenuEntry("Play Game");
             MenuEntry optionsMenuEntry = new MenuEntry("Options");
+            MenuEntry highScoreMenuEntry = new MenuEntry("Highscore");
 
             // Hook up menu event handlers.
             playGameMenuEntry.Selected += PlayGameMenuEntrySelected;
             optionsMenuEntry.Selected += OptionsMenuEntrySelected;
+            highScoreMenuEntry.Selected += HighscoreMenuEntrySelected;
 
             // Add entries to the menu.
             MenuEntries.Add(playGameMenuEntry);
-            MenuEntries.Add(optionsMenuEntry);
+            MenuEntries.Add(highScoreMenuEntry);
+            MenuEntries.Add(optionsMenuEntry);       
         }
 
 
@@ -64,6 +68,13 @@ namespace Monkey_Jump
             ScreenManager.AddScreen(new OptionsMenuScreen(), e.PlayerIndex);
         }
 
+        /// <summary>
+        /// Event handler for when the Options menu entry is selected.
+        /// </summary>
+        void HighscoreMenuEntrySelected(object sender, PlayerIndexEventArgs e)
+        {
+            ScreenManager.AddScreen(new HighscoreScreen(), e.PlayerIndex);
+        }
 
         /// <summary>
         /// When the user cancels the main menu, we exit the game.

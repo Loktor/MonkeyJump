@@ -15,7 +15,6 @@ namespace MonkeyJumpGameModel
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
             spriteBatch.Draw(texture, Position, Color.White);
-        
         }
     }
 }

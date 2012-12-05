@@ -34,6 +34,12 @@ namespace MonkeyJumpGameModel
             set { playerScore = value; }
         }
 
+        public PlayerState PlayerState
+        {
+            get { return playerState; }
+            set { playerState = value; }
+        }
+
         public Collider Collider
         {
             get
@@ -61,7 +67,7 @@ namespace MonkeyJumpGameModel
 
         public override void Update(GameTime gameTime)
         {
-            if (playerState != PlayerState.Dying)
+            if (playerState != PlayerState.Dying && playerState != PlayerState.Dead)
             {
                 playerScore += 1;
             }
@@ -85,9 +91,9 @@ namespace MonkeyJumpGameModel
                 position.Y += gameTime.ElapsedGameTime.Milliseconds / 10 * GameManager.Instance.GameSpeed * 1.5f;
                 collider.MoveToPoint(position);
 
-                if (position.Y < gameBounds.Bottom)
+                if (position.Y > gameBounds.Bottom)
                 {
-                    // TODO Implement Game Over
+                    playerState = PlayerState.Dead;
                 }
             }
 

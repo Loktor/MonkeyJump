@@ -11,6 +11,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
+using MonkeyJumpGameModel;
 #endregion
 
 namespace Monkey_Jump
@@ -61,12 +62,16 @@ namespace Monkey_Jump
                 screenManager.AddScreen(new BackgroundScreen(), null);
                 screenManager.AddScreen(new MainMenuScreen(), null);
             }
+
+            SaveGameManager.Instance.LoadHighscoreList();
         }
 
         protected override void OnExiting(object sender, System.EventArgs args)
         {
             // serialize the screen manager whenever the game exits
             screenManager.SerializeState();
+
+            SaveGameManager.Instance.SaveHighscoreList();
 
             base.OnExiting(sender, args);
         }
