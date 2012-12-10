@@ -9,6 +9,8 @@ namespace MonkeyJumpGameModel
     public class LeafGenerator : GameEntityGenerator
     {
         int elapsedTime = 0;
+        int initTime = 1000;
+        bool firstLeafGenerated = false;
         int generationTime = 3000;
         private Random rand = new Random(DateTime.Now.Millisecond);
 
@@ -16,15 +18,20 @@ namespace MonkeyJumpGameModel
         {
             List<GameEntity> generatedEntities = new List<GameEntity>();
             elapsedTime += gameTime.ElapsedGameTime.Milliseconds;
-
+            if (firstLeafGenerated == false)
+            {
+                if (elapsedTime > initTime)
+                {
+                    GenerateLeafWithRandomBanana(generatedEntities);
+                    firstLeafGenerated = true;
+                    elapsedTime = 0;
+                }
+                return generatedEntities;
+            }
             while (elapsedTime > generationTime)
             {
                 elapsedTime -= generationTime;
-                generatedEntities.Add(CreateRandomLeaf());
-                if (rand.Next(2) == 0)
-                {
-                    generatedEntities.Add(CreateRandomBanana((Leaf)generatedEntities[generatedEntities.Count - 1]));
-                }
+                GenerateLeafWithRandomBanana(generatedEntities);
                 generationTime = 3000 + rand.Next(2000);
             }
             if (generatedEntities.Count > 0)
@@ -32,6 +39,16 @@ namespace MonkeyJumpGameModel
                 elapsedTime = 0;
             }
             return generatedEntities;
+        }
+
+        private List<GameEntity> GenerateLeafWithRandomBanana(List<GameEntity> entityList)
+        {
+            entityList.Add(CreateRandomLeaf());
+            if (rand.Next(2) == 0)
+            {
+                entityList.Add(CreateRandomBanana((Leaf)entityList[entityList.Count - 1]));
+            }
+            return entityList;
         }
 
 
