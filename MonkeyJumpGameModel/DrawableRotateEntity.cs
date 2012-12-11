@@ -23,7 +23,7 @@ namespace MonkeyJumpGameModel
         //A rectangle to store which 'frame' is currently being shown
         public Rectangle sourceRect;
         //The centre of the current 'frame'
-        public Vector2 origin;
+        public Vector2 Origin { get; set; }
 
         public DrawableRotateEntity(Size size)
         {
@@ -32,13 +32,13 @@ namespace MonkeyJumpGameModel
             SpriteEffects = SpriteEffects.None;
             FrameSize = size;
             sourceRect = new Rectangle(0, 0, FrameSize.Width, FrameSize.Height);
-            origin = new Vector2(0, 0);
+            Origin = new Vector2(0, 0);
         }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
             //spriteBatch.Draw(texture, Position, Color.White);
-            spriteBatch.Draw(texture, position, sourceRect, Color.White, Rotation, origin, Scale, SpriteEffects, 0);
+            spriteBatch.Draw(texture, position, sourceRect, Color.White, Rotation, Origin, Scale, SpriteEffects, 0);
         
         }
     }

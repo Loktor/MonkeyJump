@@ -42,7 +42,6 @@ D:\temp\Monkey Jump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\XapCacheFile
 D:\temp\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeySprite.xnb
 D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\blank.xnb
 D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\gradient.xnb
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\game_background.xnb
 D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\palmBGLoop.xnb
 D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeySprite.xnb
 D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\menufont.xnb
@@ -111,3 +110,13 @@ C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\obj\Windows 
 bin\Windows Phone\Debug\
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Monkey Jump.xap
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\XapCacheFile.xml
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\bananaScore.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\background.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\backgroundGame.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyBananaFall.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Monkey Jump.xap
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\XapCacheFile.xml
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\AppManifest.xaml
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\WMAppManifest.xml.g
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\WMAppManifest.xml
+bin\Windows Phone\Debug\

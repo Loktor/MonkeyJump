@@ -25,8 +25,14 @@ namespace MonkeyJumpGameModel
         private static GameManager instance;
         private SaveGameManager saveGameManager;
         private const int BORDER_WIDTH = 60;
-        private Vector2 scorePos = new Vector2(300, 10);
+
+        private SpriteFont scoreFont;
+        private Vector2 scorePos = new Vector2(410, 10);
         private const String SCORE_TEXT = "Score: ";
+
+        private Vector2 bananaScorePos1 = new Vector2(400, 50);
+        private Vector2 bananaScorePos2 = new Vector2(370, 50);
+        private Vector2 bananaScorePos3 = new Vector2(340, 50);
 
         private int elapsedTimeSinceSpeedUpdate = 0;
         private int increaseGameSpeedThreshold = 10000;
@@ -136,9 +142,28 @@ namespace MonkeyJumpGameModel
                         SoundEffect collectSound = ResourceManager.RetreiveSong(ResourceManager.MONKEY_COLLECTABLE_SOUND);
                         collectSound.Play();
 
-                        player.PlayerScore += (entity as ICollectable).Score;                        
+                        player.PlayerScore += (entity as ICollectable).Score;
+                        if(player.BananaScore < 3)          
+                            player.BananaScore++;
+
                     }else{
-                        player.KillPlayer();
+                        if (player.BananaScore == 3)
+                        {
+                            player.BananaScore = 0;
+                            player.startImmortality();
+
+                            SoundEffect collectSound = ResourceManager.RetreiveSong(ResourceManager.MONKEY_BANANA_FALL);
+                            collectSound.Play();
+
+                            BananaFallDown bfd = new BananaFallDown();
+                            bfd.Init(GameBounds, player.position);
+                            decorationEntities.Add(bfd);
+
+                        }
+                        else if(!player.IsImmortal)
+                        {
+                            player.KillPlayer();
+                        }
                     }
                 }
             }
@@ -196,7 +221,37 @@ namespace MonkeyJumpGameModel
             }
 
             loopingWavesLow.Draw(spriteBatch, gameTime);
-            spriteBatch.DrawString(ResourceManager.RetreiveFont(ResourceManager.SCORE_FONT), SCORE_TEXT + player.PlayerScore, scorePos, Color.GhostWhite);
+
+
+            // Draw the Score
+            String scoreTxt = SCORE_TEXT + player.PlayerScore;
+            Vector2 size = scoreFont.MeasureString( scoreTxt );
+
+            Vector2 scorePosCurr = scorePos;
+            scorePosCurr.X -= size.X;
+            spriteBatch.DrawString(ResourceManager.RetreiveFont(ResourceManager.SCORE_FONT), scoreTxt, scorePosCurr, Color.GhostWhite);
+        
+
+            // Draw the already collected bananas.
+            switch (player.BananaScore)
+            {
+                case 3:
+                    spriteBatch.Draw(ResourceManager.RetreiveTexture(ResourceManager.BANANA_SCORE_PATH), bananaScorePos1, Color.White);
+                    spriteBatch.Draw(ResourceManager.RetreiveTexture(ResourceManager.BANANA_SCORE_PATH), bananaScorePos2, Color.White);
+                    spriteBatch.Draw(ResourceManager.RetreiveTexture(ResourceManager.BANANA_SCORE_PATH), bananaScorePos3, Color.White);
+                    break;
+                case 2:
+                    spriteBatch.Draw(ResourceManager.RetreiveTexture(ResourceManager.BANANA_SCORE_PATH), bananaScorePos1, Color.White);
+                    spriteBatch.Draw(ResourceManager.RetreiveTexture(ResourceManager.BANANA_SCORE_PATH), bananaScorePos2, Color.White);
+                    break;
+                case 1:
+                    spriteBatch.Draw(ResourceManager.RetreiveTexture(ResourceManager.BANANA_SCORE_PATH), bananaScorePos1, Color.White);
+                    break;
+
+            }
+            
+            
+            
         }
 
         public void LoadEntityTextures(ContentManager content)
@@ -216,7 +271,9 @@ namespace MonkeyJumpGameModel
             // Load resuable textures
             ResourceManager.Add(ResourceManager.MONKEY_DEATH_SOUND, content.Load<SoundEffect>(ResourceManager.MONKEY_DEATH_SOUND));
             ResourceManager.Add(ResourceManager.MONKEY_COLLECTABLE_SOUND, content.Load<SoundEffect>(ResourceManager.MONKEY_COLLECTABLE_SOUND));
+            ResourceManager.Add(ResourceManager.MONKEY_BANANA_FALL, content.Load<SoundEffect>(ResourceManager.MONKEY_BANANA_FALL));
             ResourceManager.Add(ResourceManager.BANANA_PATH, content.Load<Texture2D>(ResourceManager.BANANA_PATH));
+            ResourceManager.Add(ResourceManager.BANANA_SCORE_PATH, content.Load<Texture2D>(ResourceManager.BANANA_SCORE_PATH));
             ResourceManager.Add(ResourceManager.LEAF_PATH, content.Load<Texture2D>(ResourceManager.LEAF_PATH));
             ResourceManager.Add(ResourceManager.COCONUT_PATH, content.Load<Texture2D>(ResourceManager.COCONUT_PATH));
             ResourceManager.Add(ResourceManager.SHARK_PATH, content.Load<Texture2D>(ResourceManager.SHARK_PATH));
@@ -232,6 +289,7 @@ namespace MonkeyJumpGameModel
             }
 
             player.LoadTextures(content);
+            scoreFont = ResourceManager.RetreiveFont(ResourceManager.SCORE_FONT);
         }
 
         public void InitEntities()

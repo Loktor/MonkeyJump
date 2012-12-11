@@ -21,7 +21,7 @@ namespace MonkeyJumpGameModel
             {
                 elapsedTime -= generationTime;
                 generatedEntities.Add(CreateRandomCoconut());
-                generationTime = 3000 + rand.Next(2000);
+                generationTime = (int) ((3000 + rand.Next(2000))/GameManager.Instance.GameSpeed);
             }
             if (generatedEntities.Count > 0)
             {

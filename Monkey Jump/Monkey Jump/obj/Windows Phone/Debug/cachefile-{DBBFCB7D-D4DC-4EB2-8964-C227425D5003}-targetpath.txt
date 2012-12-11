@@ -1,6 +1,5 @@
 Content\blank.xnb
 Content\gradient.xnb
-Content\game\game_background.xnb
 Content\game\palmBGLoop.xnb
 Content\game\monkeySprite.xnb
 Content\game\monkeyClimbingSprite.xnb
@@ -20,3 +19,7 @@ Content\game\bgSound.xnb
 Content\game\bgSound.wma
 Content\game\monkeyCollectable.xnb
 Content\game\monkeyDeath.xnb
+Content\game\bananaScore.xnb
+Content\game\background.xnb
+Content\game\backgroundGame.xnb
+Content\game\monkeyBananaFall.xnb

@@ -65,7 +65,7 @@ namespace Monkey_Jump
                 gameManager = GameManager.CreateNewGameManager(ScreenManager.GraphicsDevice.Viewport);
 
             gameFont = content.Load<SpriteFont>("gamefont");
-            mainBackground = content.Load<Texture2D>("game/game_background");
+            mainBackground = content.Load<Texture2D>("game/backgroundGame");
             gameManager.LoadEntityTextures(content);
 
             gameManager.InitEntities();

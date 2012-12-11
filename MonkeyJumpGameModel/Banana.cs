@@ -20,6 +20,12 @@ namespace MonkeyJumpGameModel
         {
         }
 
+        public Banana(Size s)
+            : base(s)
+        {
+            bananaSize = s;
+        }
+
         public int Score
         {
             get

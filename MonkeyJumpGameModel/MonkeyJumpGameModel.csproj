@@ -66,6 +66,7 @@
     <Compile Include="CoconutGenerator.cs" />
     <Compile Include="Collider.cs" />
     <Compile Include="Banana.cs" />
+    <Compile Include="BananaFallDown.cs" />
     <Compile Include="GameState.cs" />
     <Compile Include="HighscoreEntry.cs" />
     <Compile Include="HighscoreList.cs" />

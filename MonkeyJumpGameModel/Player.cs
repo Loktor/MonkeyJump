@@ -25,6 +25,9 @@ namespace MonkeyJumpGameModel
         private Size monkeySize = new Size(56, 56);
         private int monkeyYLevel = 600;
         private int playerScore = 0;
+        private int bananaScore = 0;
+        private bool isImmortal = false;
+        private int immortalTime = 0;
         // Playable values between 15 and 80. Higher -> more gravity, lower jump
         int monkeyJumpGravity = 25;
 
@@ -32,6 +35,18 @@ namespace MonkeyJumpGameModel
         {
             get { return playerScore; }
             set { playerScore = value; }
+        }
+
+        public int BananaScore
+        {
+            get { return bananaScore; }
+            set { bananaScore = value; }
+        }
+
+        public bool IsImmortal
+        {
+            get { return isImmortal; }
+            set { isImmortal = value; }
         }
 
         public PlayerState PlayerState
@@ -70,10 +85,16 @@ namespace MonkeyJumpGameModel
             if (playerState != PlayerState.Dying && playerState != PlayerState.Dead)
             {
                 playerScore += 1;
+                if (isImmortal)
+                {
+                    immortalTime += gameTime.ElapsedGameTime.Milliseconds;
+                    if (immortalTime > 2000)
+                        isImmortal = false;
+                }
             }
             if (playerState == PlayerState.Jumping)
             {
-                position.X += (int)headingDirection * 8;
+                position.X += (int)headingDirection * (10 + GameManager.Instance.GameSpeed);
                 position.Y = position.X > gameYCenter ? position.Y + (1 * ((position.X - gameYCenter) / monkeyJumpGravity) * (int)headingDirection) : position.Y - (1 * ((gameYCenter - position.X) / monkeyJumpGravity) * (int)headingDirection);
                 collider.MoveToPoint(position);
 
@@ -96,6 +117,8 @@ namespace MonkeyJumpGameModel
                     playerState = PlayerState.Dead;
                 }
             }
+
+
 
             base.Update(gameTime);
         }
@@ -153,6 +176,12 @@ namespace MonkeyJumpGameModel
                 SoundEffect dieSound = gameManager.ResourceManager.RetreiveSong(ResourceManager.MONKEY_DEATH_SOUND);
                 dieSound.Play();
             }
+        }
+
+        public void startImmortality()
+        {
+            isImmortal = true;
+            immortalTime = 0;
         }
     }
 }
