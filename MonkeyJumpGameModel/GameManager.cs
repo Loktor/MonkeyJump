@@ -197,21 +197,11 @@ namespace MonkeyJumpGameModel
             foreach (GameEntity entity in collidableGameEntities)
             {
                 entity.Draw(spriteBatch,gameTime);
-#if DEBUG
-                if (showBounds)
-                {
-                    spriteBatch.Draw(ResourceManager.RetreiveTexture(BOUNDS_RECT_TEX_KEY), ((ICollidable)entity).Collider.CollisionBounds, Color.White);
-                }
-#endif
+                DrawDebugOutput(spriteBatch, entity);
             }
 
             player.Draw(spriteBatch, gameTime);
-#if DEBUG
-            if (showBounds)
-            {
-                spriteBatch.Draw(ResourceManager.RetreiveTexture(BOUNDS_RECT_TEX_KEY), ((ICollidable)player).Collider.CollisionBounds, Color.White);
-            }
-#endif
+            DrawDebugOutput(spriteBatch, player);
 
             loopingWavesRight.Draw(spriteBatch, gameTime);
 
@@ -325,6 +315,25 @@ namespace MonkeyJumpGameModel
                 }
                 elapsedTimeSinceSpeedUpdate = 0;
             }
+        }
+
+        private void DrawDebugOutput(SpriteBatch spriteBatch, GameEntity entity)
+        {
+#if DEBUG
+            if (showBounds && entity is ICollidable)
+            {
+                Collider col = ((ICollidable)entity).Collider;
+                Texture2D boundsRect = ResourceManager.RetreiveTexture(BOUNDS_RECT_TEX_KEY);
+                spriteBatch.Draw(boundsRect, col.CollisionBounds, Color.White);
+                if (col is MultiCollider)
+                {
+                    foreach (Collider mCol in ((MultiCollider)col).Colliders)
+                    {
+                        spriteBatch.Draw(boundsRect, mCol.CollisionBounds, Color.White);
+                    }
+                }
+            }
+#endif
         }
     }
 }

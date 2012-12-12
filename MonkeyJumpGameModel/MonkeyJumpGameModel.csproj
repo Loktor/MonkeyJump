@@ -75,6 +75,7 @@
     <Compile Include="LeafGenerator.cs" />
     <Compile Include="LoopingWaves.cs" />
     <Compile Include="DrawableRotateEntity.cs" />
+    <Compile Include="MultiCollider.cs" />
     <Compile Include="ObjectSerializer.cs" />
     <Compile Include="SaveGameManager.cs" />
     <Compile Include="Shark.cs" />

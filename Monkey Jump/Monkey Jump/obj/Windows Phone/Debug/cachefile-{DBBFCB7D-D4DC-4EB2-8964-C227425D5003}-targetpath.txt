@@ -12,6 +12,9 @@ Content\game\shark.xnb
 Content\game\highWavesLeft.xnb
 Content\game\highWavesRight.xnb
 Content\game\lowWaves.xnb
+Content\game\bananaScore.xnb
+Content\game\background.xnb
+Content\game\backgroundGame.xnb
 Content\menufont.xnb
 Content\gamefont.xnb
 Content\game\scoreFont.xnb
@@ -19,7 +22,4 @@ Content\game\bgSound.xnb
 Content\game\bgSound.wma
 Content\game\monkeyCollectable.xnb
 Content\game\monkeyDeath.xnb
-Content\game\bananaScore.xnb
-Content\game\background.xnb
-Content\game\backgroundGame.xnb
 Content\game\monkeyBananaFall.xnb

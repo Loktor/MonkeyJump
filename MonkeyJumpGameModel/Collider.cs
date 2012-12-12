@@ -9,15 +9,17 @@ namespace MonkeyJumpGameModel
     public class Collider
     {
         Rectangle collisionBounds;
-        Size initialSize;
+        internal float currentScale = 1;
 
-        bool CenteredCollider { get; set; }
+        public bool CenteredCollider { get; set; }
 
         public Rectangle CollisionBounds
         {
             get { return collisionBounds; }
             set { collisionBounds = value; }
         }
+
+        public Rectangle InitBounds { get; set; }
 
         /// <summary>
         /// Constructor
@@ -27,48 +29,58 @@ namespace MonkeyJumpGameModel
         public Collider(Rectangle collisionBounds, bool centeredCollider)
         {
             CenteredCollider = centeredCollider;
-            initialSize = new Size(collisionBounds.Width, collisionBounds.Height);
             CollisionBounds = collisionBounds;
+            InitBounds = collisionBounds;
         }
 
         public Collider(Vector2 position, Size size, bool centeredCollider)
         {
             CenteredCollider = centeredCollider;
-            initialSize = size;
             int posX = centeredCollider ? (int)position.X - size.Width / 2 : (int)position.X;
             int posY = centeredCollider ? (int)position.Y - size.Height / 2 : (int)position.Y;
             CollisionBounds = new Rectangle(posX,posY,size.Width,size.Height);
+            InitBounds = CollisionBounds;
         }
 
-        public void MoveToPoint(Vector2 position)
+        public virtual void MoveToPoint(Vector2 position)
         {
-            collisionBounds.X = CenteredCollider ? (int)position.X - initialSize.Width / 2 : (int)position.X;
-            collisionBounds.Y = CenteredCollider ? (int)position.Y - initialSize.Height / 2 : (int)position.Y;
+            collisionBounds.X = CenteredCollider ? (int)position.X - InitBounds.Width / 2 : (int)position.X;
+            collisionBounds.Y = CenteredCollider ? (int)position.Y - InitBounds.Height / 2 : (int)position.Y;
         }
 
-        public void Scale(float scaleFactor)
+        public virtual void Scale(float scaleFactor)
         {
-            collisionBounds.Width = (int)(collisionBounds.Width * scaleFactor);
-            collisionBounds.Height = (int)(collisionBounds.Height * scaleFactor);
+            currentScale = scaleFactor;
+            collisionBounds.Width = (int)(InitBounds.Width * scaleFactor);
+            collisionBounds.Height = (int)(InitBounds.Height * scaleFactor);
         }
 
-        public void ResetSizeModifications()
+        public virtual void ResetSizeModifications()
         {
-            collisionBounds.Width = initialSize.Width;
-            collisionBounds.Height = initialSize.Height;
+            collisionBounds.Width = InitBounds.Width;
+            collisionBounds.Height = InitBounds.Height;
         }
 
-        public bool CollidesWith(Collider collider)
+        public virtual bool CollidesWith(Collider collider)
         {
+            if (collider is MultiCollider && collisionBounds.Intersects(collider.CollisionBounds))
+            {
+                foreach (Collider col in ((MultiCollider)collider).Colliders)
+                {
+                    if (collisionBounds.Intersects(col.CollisionBounds))
+                        return true;
+                }
+                return false;
+            }
             return collisionBounds.Intersects(collider.CollisionBounds);
         }
 
-        public bool Contains(Collider collider)
+        public virtual bool Contains(Collider collider)
         {
             return collisionBounds.Contains(collider.CollisionBounds);
         }
 
-        public bool IsInside(Collider collider)
+        public virtual bool IsInside(Collider collider)
         {
             return collider.CollisionBounds.Contains(collisionBounds);
         }

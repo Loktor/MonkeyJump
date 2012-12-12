@@ -22,6 +22,7 @@ namespace MonkeyJumpGameModel
         private Rectangle gameBounds;
         private int gameYCenter;
         private Collider collider;
+        private MultiCollider climbCollider;
         private Size monkeySize = new Size(56, 56);
         private int monkeyYLevel = 600;
         private int playerScore = 0;
@@ -63,7 +64,7 @@ namespace MonkeyJumpGameModel
             }
             set
             {
-                Collider = value;
+                collider = value;
             }
         }
 
@@ -75,9 +76,18 @@ namespace MonkeyJumpGameModel
             position.Y = monkeyYLevel;
             headingDirection = Direction.Left;
             playerState = PlayerState.Climbing;
-            collider = new Collider(position, monkeySize,true);
+            //collider = new Collider(position, monkeySize,true);
+            climbCollider = CreateClimbCollider(position, monkeySize, true);
+            Collider = climbCollider;
             this.gameBounds = gameBounds;
             gameYCenter = (gameBounds.Width / 2) + gameBounds.X;
+        }
+
+        private MultiCollider CreateClimbCollider(Vector2 position, Size size, bool centered)
+        {
+            MultiCollider climbCollider = new MultiCollider(position, size, centered);
+            climbCollider.AddCollider(new Collider(new Rectangle(monkeySize.Width / 2 - 20, 0, 40, monkeySize.Height), false));
+            return climbCollider;
         }
 
         public override void Update(GameTime gameTime)
