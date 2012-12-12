@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>blank.png</Source>
+      <Name>blank</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\bin\Windows Phone\Debug\Content\blank.xnb</Output>
+      <Time>2012-10-31T09:47:21+01:00</Time>
+    </Item>
+    <Item>
+      <Source>gradient.png</Source>
+      <Name>gradient</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\bin\Windows Phone\Debug\Content\gradient.xnb</Output>
+      <Time>2012-10-31T09:47:21+01:00</Time>
+    </Item>
+    <Item>
+      <Source>game\game_background.png</Source>
+      <Name>game\game_background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\bin\Windows Phone\Debug\Content\game\game_background.xnb</Output>
+      <Time>2012-10-31T09:49:32+01:00</Time>
+    </Item>
+    <Item>
+      <Source>game\palmBGLoop.png</Source>
+      <Name>game\palmBGLoop</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\bin\Windows Phone\Debug\Content\game\palmBGLoop.xnb</Output>
+      <Time>2012-10-31T12:45:08+01:00</Time>
+    </Item>
+    <Item>
+      <Source>game\monkeySprite.png</Source>
+      <Name>game\monkeySprite</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\bin\Windows Phone\Debug\Content\game\monkeySprite.xnb</Output>
+      <Time>2012-11-06T10:58:04+01:00</Time>
+    </Item>
+    <Item>
+      <Source>game\monkeyClimbingSprite.png</Source>
+      <Name>game\monkeyClimbingSprite</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\bin\Windows Phone\Debug\Content\game\monkeyClimbingSprite.xnb</Output>
+      <Time>2012-11-06T12:34:02.3296+01:00</Time>
+    </Item>
+    <Item>
+      <Source>game\monkeyJumpingSprite.png</Source>
+      <Name>game\monkeyJumpingSprite</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\bin\Windows Phone\Debug\Content\game\monkeyJumpingSprite.xnb</Output>
+      <Time>2012-11-06T12:34:02.3356+01:00</Time>
+    </Item>
+    <Item>
+      <Source>game\banana.png</Source>
+      <Name>game\banana</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\bin\Windows Phone\Debug\Content\game\banana.xnb</Output>
+      <Time>2012-11-06T12:34:02.3166+01:00</Time>
+    </Item>
+    <Item>
+      <Source>game\coconut.png</Source>
+      <Name>game\coconut</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\bin\Windows Phone\Debug\Content\game\coconut.xnb</Output>
+      <Time>2012-11-06T12:34:02.3196+01:00</Time>
+    </Item>
+    <Item>
+      <Source>game\leaf.png</Source>
+      <Name>game\leaf</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\bin\Windows Phone\Debug\Content\game\leaf.xnb</Output>
+      <Time>2012-11-06T12:34:02.3276+01:00</Time>
+    </Item>
+    <Item>
+      <Source>debug\rect.png</Source>
+      <Name>debug\rect</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\bin\Windows Phone\Debug\Content\debug\rect.xnb</Output>
+      <Time>2012-11-07T12:18:00.1104+01:00</Time>
+    </Item>
+    <Item>
+      <Source>game\shark.png</Source>
+      <Name>game\shark</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\bin\Windows Phone\Debug\Content\game\shark.xnb</Output>
+      <Time>2012-11-09T19:32:28.4456+01:00</Time>
+    </Item>
+    <Item>
+      <Source>game\highWavesLeft.png</Source>
+      <Name>game\highWavesLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\bin\Windows Phone\Debug\Content\game\highWavesLeft.xnb</Output>
+      <Time>2012-11-09T19:32:28.43+01:00</Time>
+    </Item>
+    <Item>
+      <Source>game\highWavesRight.png</Source>
+      <Name>game\highWavesRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\bin\Windows Phone\Debug\Content\game\highWavesRight.xnb</Output>
+      <Time>2012-11-09T19:32:28.43+01:00</Time>
+    </Item>
+    <Item>
+      <Source>game\lowWaves.png</Source>
+      <Name>game\lowWaves</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\bin\Windows Phone\Debug\Content\game\lowWaves.xnb</Output>
+      <Time>2012-11-09T19:32:28.43+01:00</Time>
+    </Item>
+    <Item>
+      <Source>menufont.spritefont</Source>
+      <Name>menufont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\bin\Windows Phone\Debug\Content\menufont.xnb</Output>
+      <Time>2012-10-31T09:47:21+01:00</Time>
+    </Item>
+    <Item>
+      <Source>gamefont.spritefont</Source>
+      <Name>gamefont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\bin\Windows Phone\Debug\Content\gamefont.xnb</Output>
+      <Time>2012-10-31T09:47:21+01:00</Time>
+    </Item>
+    <Item>
+      <Source>game\scoreFont.spritefont</Source>
+      <Name>game\scoreFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\bin\Windows Phone\Debug\Content\game\scoreFont.xnb</Output>
+      <Time>2012-11-07T21:29:41.7734+01:00</Time>
+    </Item>
+    <Item>
+      <Source>game\bgSound.mp3</Source>
+      <Name>game\bgSound</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\bin\Windows Phone\Debug\Content\game\bgSound.xnb</Output>
+      <Extra>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\bin\Windows Phone\Debug\Content\game\bgSound.wma</Extra>
+      <Time>2012-10-31T09:23:15+01:00</Time>
+    </Item>
+    <Item>
+      <Source>game\monkeyCollectable.wav</Source>
+      <Name>game\monkeyCollectable</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\bin\Windows Phone\Debug\Content\game\monkeyCollectable.xnb</Output>
+      <Time>2012-11-09T19:32:28.43+01:00</Time>
+    </Item>
+    <Item>
+      <Source>game\monkeyDeath.wav</Source>
+      <Name>game\monkeyDeath</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\bin\Windows Phone\Debug\Content\game\monkeyDeath.xnb</Output>
+      <Time>2012-11-09T19:32:28.4456+01:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{DBBFCB7D-D4DC-4EB2-8964-C227425D5003}</ContentProjectGUID>
+      <TargetPlatform>WindowsPhone</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey JumpContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\obj\Windows Phone\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\bin\Windows Phone\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>D:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>D:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2011-09-01T16:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>D:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>D:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>D:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>D:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2011-09-01T16:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>D:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2012-04-25T16:41:07.781+02:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
