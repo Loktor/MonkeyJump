@@ -25,7 +25,7 @@ namespace MonkeyJumpGameModel
         /// Constructor
         /// </summary>
         /// <param name="collisionBounds">Bounds of the collision rectangle</param>
-        /// <param name="centeredCollider">centers the collider to the specified position</param>
+        /// <param name="centeredCollider">Defines if the position is in the middle or the top left (centered = middle)</param>
         public Collider(Rectangle collisionBounds, bool centeredCollider)
         {
             CenteredCollider = centeredCollider;
@@ -33,6 +33,12 @@ namespace MonkeyJumpGameModel
             InitBounds = collisionBounds;
         }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="position">Position of the collider on the screen</param>
+        /// <param name="size">Initial size of the collider</param>
+        /// <param name="centeredCollider">Defines if the position is in the middle or the top left (centered = middle)</param>
         public Collider(Vector2 position, Size size, bool centeredCollider)
         {
             CenteredCollider = centeredCollider;

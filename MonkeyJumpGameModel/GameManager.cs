@@ -150,7 +150,7 @@ namespace MonkeyJumpGameModel
                         if (player.BananaScore == 3)
                         {
                             player.BananaScore = 0;
-                            player.startImmortality();
+                            player.StartImmortality();
 
                             SoundEffect collectSound = ResourceManager.RetreiveSong(ResourceManager.MONKEY_BANANA_FALL);
                             collectSound.Play();

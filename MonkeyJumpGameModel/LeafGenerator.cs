@@ -63,12 +63,12 @@ namespace MonkeyJumpGameModel
 
         public Banana CreateRandomBanana(Leaf leaf)
         {
-            Banana banana = new Banana();
+            Banana banana = new Banana(leaf.Direction);
             GameManager gameManager = GameManager.Instance;
             banana.texture = gameManager.ResourceManager.RetreiveTexture(ResourceManager.BANANA_PATH);
             banana.Init(gameManager.GameBounds);
 
-            banana.position.X = leaf.isLeft ? leaf.position.X + leaf.FrameSize.Width - 30 : leaf.position.X;
+            banana.position.X = leaf.Direction == Direction.Left ? leaf.position.X + leaf.FrameSize.Width - 30 : leaf.position.X;
             banana.SpriteEffects = leaf.SpriteEffects;
             return banana;
         }

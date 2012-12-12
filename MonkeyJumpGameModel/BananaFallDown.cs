@@ -26,7 +26,7 @@ namespace MonkeyJumpGameModel
 
             for(int i = 0; i<3; i++)
             {
-                Banana b = new Banana(bananaSize);
+                Banana b = new Banana(bananaSize,Direction.Left);
 
                 b.texture = gameManager.ResourceManager.RetreiveTexture(ResourceManager.BANANA_SCORE_PATH);
                 b.Init(gameManager.GameBounds);

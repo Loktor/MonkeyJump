@@ -14,16 +14,19 @@ namespace MonkeyJumpGameModel
         private Size bananaSize = new Size(32, 76);
         private const int SCORE_VALUE = 100;
         public Collider Collider { get; set; }
+        public Direction Direction { get; set; }
 
-        public Banana()
+        public Banana(Direction direction)
             : base(new Size(32, 76))
         {
+            Direction = direction;
         }
 
-        public Banana(Size s)
+        public Banana(Size s,Direction direction)
             : base(s)
         {
             bananaSize = s;
+            Direction = direction;
         }
 
         public int Score
@@ -38,15 +41,24 @@ namespace MonkeyJumpGameModel
         {
             base.Init(gameBounds);
             gameManager = GameManager.Instance;
-            //position.X = new Random(DateTime.Now.Millisecond).Next(gameBounds.Width - bananaSize.Width) + gameBounds.X;
             position.Y = -bananaSize.Height;
-            Collider = new Collider(position, bananaSize, false);
+            Collider = BananaCollider(position, bananaSize, false,Direction);
         }
 
         public override void Update(GameTime gameTime)
         {
             position.Y += gameTime.ElapsedGameTime.Milliseconds / 10 * GameManager.Instance.GameSpeed;
             Collider.MoveToPoint(position);
+        }
+
+        private MultiCollider BananaCollider(Vector2 position, Size size, bool centered, Direction direction)
+        {
+            MultiCollider climbCollider = new MultiCollider(position, size, centered, direction);
+            climbCollider.AddCollider(new Collider(new Rectangle(1, 20, 15, 14), false));
+            climbCollider.AddCollider(new Collider(new Rectangle(2, 1, 22, 17), false));
+            climbCollider.AddCollider(new Collider(new Rectangle(2, 35, 19, 14), false));
+            climbCollider.AddCollider(new Collider(new Rectangle(8, 50, 23, 15), false));
+            return climbCollider;
         }
     }
 }

@@ -77,15 +77,15 @@ namespace MonkeyJumpGameModel
             headingDirection = Direction.Left;
             playerState = PlayerState.Climbing;
             //collider = new Collider(position, monkeySize,true);
-            climbCollider = CreateClimbCollider(position, monkeySize, true);
+            climbCollider = CreateClimbCollider(position, monkeySize, true,headingDirection);
             Collider = climbCollider;
             this.gameBounds = gameBounds;
             gameYCenter = (gameBounds.Width / 2) + gameBounds.X;
         }
 
-        private MultiCollider CreateClimbCollider(Vector2 position, Size size, bool centered)
+        private MultiCollider CreateClimbCollider(Vector2 position, Size size, bool centered,Direction direction)
         {
-            MultiCollider climbCollider = new MultiCollider(position, size, centered);
+            MultiCollider climbCollider = new MultiCollider(position, size, centered, direction);
             climbCollider.AddCollider(new Collider(new Rectangle(monkeySize.Width / 2 - 20, 0, 40, monkeySize.Height), false));
             return climbCollider;
         }
@@ -188,7 +188,7 @@ namespace MonkeyJumpGameModel
             }
         }
 
-        public void startImmortality()
+        public void StartImmortality()
         {
             isImmortal = true;
             immortalTime = 0;
