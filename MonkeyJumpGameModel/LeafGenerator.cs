@@ -32,7 +32,7 @@ namespace MonkeyJumpGameModel
             {
                 elapsedTime -= generationTime;
                 GenerateLeafWithRandomBanana(generatedEntities);
-                generationTime = 3000 + rand.Next(2000);
+                generationTime = (int)((4000 + rand.Next(3000)) / GameManager.Instance.GameSpeed);
             }
             if (generatedEntities.Count > 0)
             {

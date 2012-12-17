@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
   <App xmlns="" ProductID="{97fbd057-b97f-4988-bcf9-4c811fb84476}" Title="Monkey Jump" RuntimeType="XNA" Version="1.0.0.0" Genre="Apps.Normal" Author="" Description="" Publisher="">
     <IconPath IsRelative="true" IsResource="false">GameThumbnail.png</IconPath>
@@ -33,4 +33,4 @@
     </Tokens>
   </App>
 </Deployment>
-<!-- WPSDK Version 7.1.7720.0 -->
+<!-- WPSDK Version 7.1.8773.0 -->

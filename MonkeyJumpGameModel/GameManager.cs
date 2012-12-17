@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input.Touch;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.GamerServices;
 
 namespace MonkeyJumpGameModel
 {
@@ -14,6 +15,8 @@ namespace MonkeyJumpGameModel
         private List<GameEntity> collidableGameEntities;
         private List<GameEntity> decorationEntities;
         private List<GameEntityGenerator> gameEntityGenerators;
+        private Texture2D mainBackground;
+        private Vector2 bgPosition = new Vector2(0, -200);
         private LoopingBackground loopingBackground;
         private LoopingWaves loopingWavesRight;
         private LoopingWaves loopingWavesLeft;
@@ -99,8 +102,8 @@ namespace MonkeyJumpGameModel
         private void InitGameEntityGenerators()
         {
             gameEntityGenerators = new List<GameEntityGenerator>();
-            gameEntityGenerators.Add(new CoconutGenerator());
             gameEntityGenerators.Add(new LeafGenerator());
+            gameEntityGenerators.Add(new CoconutGenerator());
         }
     
         public void UpdateEntities(GameTime gameTime)
@@ -116,6 +119,8 @@ namespace MonkeyJumpGameModel
                     saveGameManager.Highscore.AddScore("test", player.PlayerScore);
                     saveGameManager.SaveHighscoreList();
                     gameState = GameState.Over;
+
+                    Guide.BeginShowKeyboardInput(0, "Enter Name:", "Name for the highscore.", "Test Player", null, null);
                 }
                 return;
             }
@@ -125,6 +130,10 @@ namespace MonkeyJumpGameModel
             loopingWavesRight.Update(gameTime);
             loopingWavesLeft.Update(gameTime);
             loopingWavesLow.Update(gameTime);
+
+            if (bgPosition.Y < -65)
+                bgPosition.Y += 0.1f;
+
 
             foreach(GameEntity entity in collidableGameEntities)
             {
@@ -189,6 +198,7 @@ namespace MonkeyJumpGameModel
 
         public void DrawEntities(SpriteBatch spriteBatch, GameTime gameTime)
         {
+            spriteBatch.Draw(mainBackground, bgPosition, Color.White);
             loopingWavesLeft.Draw(spriteBatch, gameTime);
             loopingBackground.Draw(spriteBatch,gameTime);
 
@@ -250,11 +260,12 @@ namespace MonkeyJumpGameModel
                 ResourceManager.Add(BOUNDS_RECT_TEX_KEY,content.Load<Texture2D>(BOUNDS_RECT_TEX_KEY));
             }
 #endif
+            mainBackground = content.Load<Texture2D>("game/backgroundGame");
             loopingBackground.LoadTextures(content);
             loopingWavesRight.LoadTextures(content);
             loopingWavesLeft.LoadTextures(content);
             loopingWavesLow.LoadTextures(content);
-
+            
 
             // Load resuable textures
             ResourceManager.Add(ResourceManager.MONKEY_DEATH_SOUND, content.Load<SoundEffect>(ResourceManager.MONKEY_DEATH_SOUND));

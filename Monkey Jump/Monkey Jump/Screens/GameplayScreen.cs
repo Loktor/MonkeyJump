@@ -17,6 +17,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using MonkeyJumpGameModel;
 using Microsoft.Xna.Framework.Input.Touch;
+using System.Diagnostics;
 #endregion
 
 namespace Monkey_Jump
@@ -32,7 +33,6 @@ namespace Monkey_Jump
 
         ContentManager content;
         SpriteFont gameFont;
-        Texture2D mainBackground;
         GameManager gameManager;
         Song bgMusic;
 
@@ -65,7 +65,6 @@ namespace Monkey_Jump
                 gameManager = GameManager.CreateNewGameManager(ScreenManager.GraphicsDevice.Viewport);
 
             gameFont = content.Load<SpriteFont>("gamefont");
-            mainBackground = content.Load<Texture2D>("game/backgroundGame");
             gameManager.LoadEntityTextures(content);
 
             gameManager.InitEntities();
@@ -154,6 +153,7 @@ namespace Monkey_Jump
         /// <summary>
         /// Draws the gameplay screen.
         /// </summary>
+
         public override void Draw(GameTime gameTime)
         {
             // This game has a blue background. Why? Because!
@@ -164,8 +164,6 @@ namespace Monkey_Jump
             SpriteBatch spriteBatch = ScreenManager.SpriteBatch;
 
             spriteBatch.Begin();
-
-            spriteBatch.Draw(mainBackground, Vector2.Zero, Color.White);
 
             gameManager.DrawEntities(spriteBatch, gameTime);
 
