@@ -5,6 +5,7 @@ using System.Text;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Audio;
+using System.Diagnostics;
 
 namespace MonkeyJumpGameModel
 {
@@ -27,11 +28,47 @@ namespace MonkeyJumpGameModel
         Dictionary<String, SoundEffect> soundDictionary = new Dictionary<string, SoundEffect>();
         Dictionary<String, SpriteFont> fontDictionary = new Dictionary<string, SpriteFont>();
 
+        private static ResourceManager instance;
+
+        private ResourceManager() 
+        {
+        }
+
+        /// <summary>
+        /// Creates a new instance of the ResourceManager
+        /// </summary>
+        /// <returns></returns>
+        public static ResourceManager CreateNewResourceManager()
+        {
+            instance = new ResourceManager();
+            return instance;
+        }
+
+        /// <summary>
+        /// Returns an instance of the saveGameManager
+        /// </summary>
+        public static ResourceManager Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    return CreateNewResourceManager();
+                }
+                return instance;
+            }
+        }
+
+
+
         public void Add(String key, Texture2D value)
         {
             if (textureDictionary.ContainsKey(key))
             {
-                throw new InvalidOperationException("Key is already in dictionary");
+                Debug.WriteLine("Key is already in dictionary");
+                textureDictionary.Remove(key);
+                textureDictionary.Add(key, value);
+                return;
             }
             textureDictionary.Add(key, value);
         }
@@ -40,7 +77,10 @@ namespace MonkeyJumpGameModel
         {
             if (soundDictionary.ContainsKey(key))
             {
-                throw new InvalidOperationException("Key is already in dictionary");
+                Debug.WriteLine("Key is already in dictionary");
+                soundDictionary.Remove(key);
+                soundDictionary.Add(key, value);
+                return;
             }
             soundDictionary.Add(key, value);
         }
@@ -49,7 +89,10 @@ namespace MonkeyJumpGameModel
         {
             if (fontDictionary.ContainsKey(key))
             {
-                throw new InvalidOperationException("Key is already in dictionary");
+                Debug.WriteLine("Key is already in dictionary");
+                fontDictionary.Remove(key);
+                fontDictionary.Add(key, value);
+                return;
             }
             fontDictionary.Add(key, value);
         }

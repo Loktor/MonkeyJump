@@ -70,9 +70,6 @@ namespace Monkey_Jump
 
             gameManager.InitEntities();
 
-            bgMusic = content.Load<Song>("game/bgSound");
-            MediaPlayer.IsRepeating = true;
-
             // A real game would probably have more content than this sample, so
             // it would take longer to load. We simulate that by delaying for a
             // while, giving you a chance to admire the beautiful loading screen.
@@ -83,7 +80,13 @@ namespace Monkey_Jump
             // it should not try to catch up.
             ScreenManager.Game.ResetElapsedTime();
 
-            MediaPlayer.Play(bgMusic);
+            if (SaveGameManager.Instance.Options.BackgroundMusicEnabled)
+            {
+                bgMusic = content.Load<Song>("game/bgSound");
+                MediaPlayer.IsRepeating = true;
+
+                MediaPlayer.Play(bgMusic);
+            }
         }
 
 

@@ -63,7 +63,7 @@ namespace Monkey_Jump
                 screenManager.AddScreen(new MainMenuScreen(), null);
             }
 
-            SaveGameManager.Instance.LoadHighscoreList();
+            SaveGameManager.Instance.LoadAllEntries();
         }
 
         protected override void OnExiting(object sender, System.EventArgs args)
@@ -71,7 +71,7 @@ namespace Monkey_Jump
             // serialize the screen manager whenever the game exits
             screenManager.SerializeState();
 
-            SaveGameManager.Instance.SaveHighscoreList();
+            SaveGameManager.Instance.SaveAllEntries();
 
             base.OnExiting(sender, args);
         }

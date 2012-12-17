@@ -183,8 +183,7 @@ namespace MonkeyJumpGameModel
                 climbAnimation.Rotation = headingDirection == Direction.Left ? 1.57f : 4.71f;
                 CurrentAnimation = climbAnimation;
 
-                SoundEffect dieSound = gameManager.ResourceManager.RetreiveSong(ResourceManager.MONKEY_DEATH_SOUND);
-                dieSound.Play();
+                SoundPlayer.Instance.PlaySound(ResourceManager.MONKEY_DEATH_SOUND);
             }
         }
 

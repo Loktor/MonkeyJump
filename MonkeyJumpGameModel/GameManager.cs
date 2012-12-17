@@ -37,7 +37,7 @@ namespace MonkeyJumpGameModel
         private int elapsedTimeSinceSpeedUpdate = 0;
         private int increaseGameSpeedThreshold = 10000;
 #if DEBUG
-        private bool showBounds = true;
+        private bool showBounds = false;
         private const String BOUNDS_RECT_TEX_KEY = "debug/rect";
 #endif
 
@@ -74,7 +74,7 @@ namespace MonkeyJumpGameModel
 
         private GameManager(Viewport screen) 
         {
-            ResourceManager = new ResourceManager();
+            ResourceManager = ResourceManager.Instance;
             Rectangle tileSave = screen.TitleSafeArea;
             saveGameManager = SaveGameManager.Instance;
             Screen = screen;
@@ -139,8 +139,7 @@ namespace MonkeyJumpGameModel
 
                         entitiesToRemove.Add(entity);
 
-                        SoundEffect collectSound = ResourceManager.RetreiveSong(ResourceManager.MONKEY_COLLECTABLE_SOUND);
-                        collectSound.Play();
+                        SoundPlayer.Instance.PlaySound(ResourceManager.MONKEY_COLLECTABLE_SOUND);
 
                         player.PlayerScore += (entity as ICollectable).Score;
                         if(player.BananaScore < 3)          
@@ -152,8 +151,7 @@ namespace MonkeyJumpGameModel
                             player.BananaScore = 0;
                             player.StartImmortality();
 
-                            SoundEffect collectSound = ResourceManager.RetreiveSong(ResourceManager.MONKEY_BANANA_FALL);
-                            collectSound.Play();
+                            SoundPlayer.Instance.PlaySound(ResourceManager.MONKEY_BANANA_FALL);
 
                             BananaFallDown bfd = new BananaFallDown();
                             bfd.Init(GameBounds, player.position);

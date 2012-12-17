@@ -9,6 +9,7 @@
 
 #region Using Statements
 using Microsoft.Xna.Framework;
+using MonkeyJumpGameModel;
 #endregion
 
 namespace Monkey_Jump
@@ -22,26 +23,10 @@ namespace Monkey_Jump
     {
         #region Fields
 
-        MenuEntry ungulateMenuEntry;
-        MenuEntry languageMenuEntry;
-        MenuEntry frobnicateMenuEntry;
-        MenuEntry elfMenuEntry;
+        MenuEntry backgroundMusicMenuEntry;
+        MenuEntry gameplaySoundMenuEntry;
 
-        enum Ungulate
-        {
-            BactrianCamel,
-            Dromedary,
-            Llama,
-        }
-
-        static Ungulate currentUngulate = Ungulate.Dromedary;
-
-        static string[] languages = { "C#", "French", "Deoxyribonucleic acid" };
-        static int currentLanguage = 0;
-
-        static bool frobnicate = true;
-
-        static int elf = 23;
+        SaveGameManager saveGame = SaveGameManager.Instance;
 
         #endregion
 
@@ -55,24 +40,18 @@ namespace Monkey_Jump
             : base("Options")
         {
             // Create our menu entries.
-            ungulateMenuEntry = new MenuEntry(string.Empty);
-            languageMenuEntry = new MenuEntry(string.Empty);
-            frobnicateMenuEntry = new MenuEntry(string.Empty);
-            elfMenuEntry = new MenuEntry(string.Empty);
+            backgroundMusicMenuEntry = new MenuEntry(string.Empty);
+            gameplaySoundMenuEntry = new MenuEntry(string.Empty);
 
             SetMenuEntryText();
 
             // Hook up menu event handlers.
-            ungulateMenuEntry.Selected += UngulateMenuEntrySelected;
-            languageMenuEntry.Selected += LanguageMenuEntrySelected;
-            frobnicateMenuEntry.Selected += FrobnicateMenuEntrySelected;
-            elfMenuEntry.Selected += ElfMenuEntrySelected;
+            backgroundMusicMenuEntry.Selected += MusicMenuEntrySelected;
+            gameplaySoundMenuEntry.Selected += GameplaySoundEntrySelected;
 
             // Add entries to the menu.
-            MenuEntries.Add(ungulateMenuEntry);
-            MenuEntries.Add(languageMenuEntry);
-            MenuEntries.Add(frobnicateMenuEntry);
-            MenuEntries.Add(elfMenuEntry);
+            MenuEntries.Add(backgroundMusicMenuEntry);
+            MenuEntries.Add(gameplaySoundMenuEntry);
         }
 
 
@@ -81,10 +60,8 @@ namespace Monkey_Jump
         /// </summary>
         void SetMenuEntryText()
         {
-            ungulateMenuEntry.Text = "Preferred ungulate: " + currentUngulate;
-            languageMenuEntry.Text = "Language: " + languages[currentLanguage];
-            frobnicateMenuEntry.Text = "Frobnicate: " + (frobnicate ? "on" : "off");
-            elfMenuEntry.Text = "elf: " + elf;
+            gameplaySoundMenuEntry.Text = "Gameplay sounds: " + (saveGame.Options.GamePlaySoundsEnabled ? "on" : "off");
+            backgroundMusicMenuEntry.Text = "Background music: " + (saveGame.Options.BackgroundMusicEnabled ? "on" : "off");
         }
 
 
@@ -93,52 +70,27 @@ namespace Monkey_Jump
         #region Handle Input
 
 
-        /// <summary>
-        /// Event handler for when the Ungulate menu entry is selected.
-        /// </summary>
-        void UngulateMenuEntrySelected(object sender, PlayerIndexEventArgs e)
-        {
-            currentUngulate++;
 
-            if (currentUngulate > Ungulate.Llama)
-                currentUngulate = 0;
+        void GameplaySoundEntrySelected(object sender, PlayerIndexEventArgs e)
+        {
+            saveGame.Options.GamePlaySoundsEnabled = !saveGame.Options.GamePlaySoundsEnabled;
+
+            saveGame.SaveOptions();
 
             SetMenuEntryText();
         }
-
-
-        /// <summary>
-        /// Event handler for when the Language menu entry is selected.
-        /// </summary>
-        void LanguageMenuEntrySelected(object sender, PlayerIndexEventArgs e)
-        {
-            currentLanguage = (currentLanguage + 1) % languages.Length;
-
-            SetMenuEntryText();
-        }
-
 
         /// <summary>
         /// Event handler for when the Frobnicate menu entry is selected.
         /// </summary>
-        void FrobnicateMenuEntrySelected(object sender, PlayerIndexEventArgs e)
+        void MusicMenuEntrySelected(object sender, PlayerIndexEventArgs e)
         {
-            frobnicate = !frobnicate;
+            saveGame.Options.BackgroundMusicEnabled = !saveGame.Options.BackgroundMusicEnabled;
+
+            saveGame.SaveOptions();
 
             SetMenuEntryText();
         }
-
-
-        /// <summary>
-        /// Event handler for when the Elf menu entry is selected.
-        /// </summary>
-        void ElfMenuEntrySelected(object sender, PlayerIndexEventArgs e)
-        {
-            elf++;
-
-            SetMenuEntryText();
-        }
-
 
         #endregion
     }
