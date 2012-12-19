@@ -17,6 +17,7 @@ Content\game\backgroundGame.xnb
 Content\game\highWavesLeftBlood.xnb
 Content\game\highWavesRightBlood.xnb
 Content\game\lowWavesBlood.xnb
+Content\backgroundGameOver.xnb
 Content\menufont.xnb
 Content\gamefont.xnb
 Content\game\scoreFont.xnb

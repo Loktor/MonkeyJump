@@ -42,7 +42,7 @@ namespace MonkeyJumpGameModel
         private int elapsedTimeSinceSpeedUpdate = 0;
         private int increaseGameSpeedThreshold = 10000;
 #if DEBUG
-        private bool showBounds = false;
+        private bool showBounds = true;
         private const String BOUNDS_RECT_TEX_KEY = "debug/rect";
 #endif
 
@@ -115,7 +115,7 @@ namespace MonkeyJumpGameModel
             {
                 return;
             }
-            if (player.PlayerState == PlayerState.Dead)
+            if (player.PlayerState == PlayerState.Dead && gameState != GameState.Over)
             {
                 loopingWavesLeft.setBloodTexture();
                 loopingWavesLow.setBloodTexture();
@@ -124,9 +124,6 @@ namespace MonkeyJumpGameModel
                 gameState = GameState.Over;
 
                 GameOver(this, new GameOverEventArgs(player.PlayerScore));
-
-                }
-                }
                 return;
             }
 

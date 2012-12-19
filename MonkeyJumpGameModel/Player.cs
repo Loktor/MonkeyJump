@@ -23,6 +23,7 @@ namespace MonkeyJumpGameModel
         private int gameYCenter;
         private Collider collider;
         private MultiCollider climbCollider;
+        private MultiCollider jumpCollider;
         private Size monkeySize = new Size(56, 56);
         private int monkeyYLevel = 600;
         private int playerScore = 0;
@@ -78,6 +79,7 @@ namespace MonkeyJumpGameModel
             playerState = PlayerState.Climbing;
             //collider = new Collider(position, monkeySize,true);
             climbCollider = CreateClimbCollider(position, monkeySize, true,headingDirection);
+            jumpCollider = CreateJumpCollider(position,monkeySize, true,headingDirection);
             Collider = climbCollider;
             this.gameBounds = gameBounds;
             gameYCenter = (gameBounds.Width / 2) + gameBounds.X;
@@ -88,6 +90,14 @@ namespace MonkeyJumpGameModel
             MultiCollider climbCollider = new MultiCollider(position, size, centered, direction);
             climbCollider.AddCollider(new Collider(new Rectangle(monkeySize.Width / 2 - 20, 0, 40, monkeySize.Height), false));
             return climbCollider;
+        }
+
+        private MultiCollider CreateJumpCollider(Vector2 position, Size size, bool centered, Direction direction)
+        {
+            MultiCollider jumpCollider = new MultiCollider(position, size, centered, direction);
+            //jumpCollider.AddCollider(new Collider(new Rectangle(monkeySize.Width / 2 - 20, 0, 40, monkeySize.Height), false));
+            jumpCollider.AddCollider(new Collider(new Rectangle(0, monkeySize.Height / 2 - 25, monkeySize.Width, 40), false));
+            return jumpCollider;
         }
 
         public override void Update(GameTime gameTime)
@@ -112,6 +122,7 @@ namespace MonkeyJumpGameModel
                 {
                     position.X = position.X < gameBounds.X ? gameBounds.X : gameBounds.Right;
                     position.Y = monkeyYLevel;
+                    collider = climbCollider;
                     collider.MoveToPoint(position);
                     playerState = PlayerState.Climbing;
                     CurrentAnimation = climbAnimation;
@@ -146,7 +157,10 @@ namespace MonkeyJumpGameModel
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
-            base.Draw(spriteBatch, gameTime);
+            if (!isImmortal || (isImmortal && immortalTime / 100 % 2 == 0))
+            {
+                base.Draw(spriteBatch, gameTime);
+            }
         }
 
         internal void HandleInput(TouchCollection touchCollection)
@@ -162,6 +176,8 @@ namespace MonkeyJumpGameModel
             if (touchReleased && playerState == PlayerState.Climbing)
             {
                 playerState = PlayerState.Jumping;
+                collider = jumpCollider;
+                collider.MoveToPoint(position);
                 if(CurrentAnimation != jumpAnimation)
                     CurrentAnimation = jumpAnimation;
                 headingDirection = (Direction)((int)headingDirection * -1);
@@ -182,7 +198,6 @@ namespace MonkeyJumpGameModel
                 playerState = PlayerState.Dying;
                 climbAnimation.Rotation = headingDirection == Direction.Left ? 1.57f : 4.71f;
                 CurrentAnimation = climbAnimation;
-
                 SoundPlayer.Instance.PlaySound(ResourceManager.MONKEY_DEATH_SOUND);
             }
         }

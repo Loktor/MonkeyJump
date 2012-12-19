@@ -73,7 +73,7 @@ namespace Monkey_Jump
         /// </summary>
         void HighscoreMenuEntrySelected(object sender, PlayerIndexEventArgs e)
         {
-            ScreenManager.AddScreen(new HighscoreScreen(), e.PlayerIndex);
+            ScreenManager.AddScreen(new HighscoreScreen(false), e.PlayerIndex);
         }
 
         /// <summary>

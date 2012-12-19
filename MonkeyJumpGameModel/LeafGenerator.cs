@@ -68,7 +68,8 @@ namespace MonkeyJumpGameModel
             banana.texture = gameManager.ResourceManager.RetreiveTexture(ResourceManager.BANANA_PATH);
             banana.Init(gameManager.GameBounds);
 
-            banana.position.X = leaf.Direction == Direction.Left ? leaf.position.X + leaf.FrameSize.Width - 30 : leaf.position.X;
+            banana.position.X = leaf.Direction == Direction.Left ? leaf.position.X - 30 + leaf.FrameSize.Width - 30 : leaf.position.X + 30;
+            banana.position.Y -= 10; // to position the banana directly on the leave
             banana.SpriteEffects = leaf.SpriteEffects;
             return banana;
         }
