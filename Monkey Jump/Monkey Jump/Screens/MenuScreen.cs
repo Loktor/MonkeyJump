@@ -47,6 +47,16 @@ namespace Monkey_Jump
             get { return menuEntries; }
         }
 
+        /// <summary>
+        /// Gets the list of menu entries, so derived classes can add
+        /// or change the menu contents.
+        /// </summary>
+        protected String MenuTitle
+        {
+            get { return menuTitle; }
+            set { menuTitle = value; }
+        }
+
 
         #endregion
 
