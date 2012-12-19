@@ -42,7 +42,7 @@ namespace MonkeyJumpGameModel
         private int elapsedTimeSinceSpeedUpdate = 0;
         private int increaseGameSpeedThreshold = 10000;
 #if DEBUG
-        private bool showBounds = true;
+        private bool showBounds = false;
         private const String BOUNDS_RECT_TEX_KEY = "debug/rect";
 #endif
 

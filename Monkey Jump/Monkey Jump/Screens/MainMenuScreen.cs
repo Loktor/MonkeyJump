@@ -32,16 +32,19 @@ namespace Monkey_Jump
             MenuEntry playGameMenuEntry = new MenuEntry("Play Game");
             MenuEntry optionsMenuEntry = new MenuEntry("Options");
             MenuEntry highScoreMenuEntry = new MenuEntry("Highscore");
+            MenuEntry aboutMenuEntry = new MenuEntry("About");
 
             // Hook up menu event handlers.
             playGameMenuEntry.Selected += PlayGameMenuEntrySelected;
             optionsMenuEntry.Selected += OptionsMenuEntrySelected;
             highScoreMenuEntry.Selected += HighscoreMenuEntrySelected;
+            aboutMenuEntry.Selected += AboutMenuEntrySelected;
 
             // Add entries to the menu.
             MenuEntries.Add(playGameMenuEntry);
             MenuEntries.Add(highScoreMenuEntry);
-            MenuEntries.Add(optionsMenuEntry);       
+            MenuEntries.Add(optionsMenuEntry);
+            MenuEntries.Add(aboutMenuEntry);   
         }
 
 
@@ -69,11 +72,19 @@ namespace Monkey_Jump
         }
 
         /// <summary>
-        /// Event handler for when the Options menu entry is selected.
+        /// Event handler for when the Highscore menu entry is selected.
         /// </summary>
         void HighscoreMenuEntrySelected(object sender, PlayerIndexEventArgs e)
         {
             ScreenManager.AddScreen(new HighscoreScreen(false), e.PlayerIndex);
+        }
+
+        /// <summary>
+        /// Event handler for when the About menu entry is selected.
+        /// </summary>
+        void AboutMenuEntrySelected(object sender, PlayerIndexEventArgs e)
+        {
+            ScreenManager.AddScreen(new AboutScreen(), e.PlayerIndex);
         }
 
         /// <summary>
