@@ -193,7 +193,7 @@ namespace MonkeyJumpGameModel
 
         public void KillPlayer()
         {
-            if (playerState != PlayerState.Dying)
+            if (playerState != PlayerState.Dying && playerState != PlayerState.Dead)
             {
                 playerState = PlayerState.Dying;
                 climbAnimation.Rotation = headingDirection == Direction.Left ? 1.57f : 4.71f;

@@ -20,9 +20,9 @@ namespace MonkeyJumpGameModel
         private Texture2D mainBackground;
         private Vector2 bgPosition = new Vector2(0, -200);
         private LoopingBackground loopingBackground;
-        private LoopingWaves loopingWavesRight;
-        private LoopingWaves loopingWavesLeft;
-        private LoopingWaves loopingWavesLow;
+        private LoopingWave loopingWavesRight;
+        private LoopingWave loopingWavesLeft;
+        private LoopingWave loopingWavesLow;
         private Player player;
         private Shark shark;
         private GameState gameState = GameState.NotCreated;
@@ -90,9 +90,9 @@ namespace MonkeyJumpGameModel
             collidableGameEntities = new List<GameEntity>();
             decorationEntities = new List<GameEntity>();
             loopingBackground = new LoopingBackground();
-            loopingWavesRight = new LoopingWaves(true, false);
-            loopingWavesLeft = new LoopingWaves(false, false);
-            loopingWavesLow = new LoopingWaves(false, true);
+            loopingWavesRight = new LoopingWave(true, false);
+            loopingWavesLeft = new LoopingWave(false, false);
+            loopingWavesLow = new LoopingWave(false, true);
 
             player = new Player();
             shark = new Shark();
@@ -111,18 +111,21 @@ namespace MonkeyJumpGameModel
     
         public void UpdateEntities(GameTime gameTime)
         {
-            if (gameState == GameState.Paused || gameState == GameState.Over)
+            if (gameState == GameState.Paused)
             {
                 return;
             }
-            if (player.PlayerState == PlayerState.Dead && gameState != GameState.Over)
+            else if (player.PlayerState == PlayerState.Dead && gameState != GameState.Over)
             {
-                loopingWavesLeft.setBloodTexture();
-                loopingWavesLow.setBloodTexture();
-                loopingWavesRight.setBloodTexture();
+                loopingWavesLeft.StartBloodEffekt();
+                loopingWavesLow.StartBloodEffekt();
+                loopingWavesRight.StartBloodEffekt();
 
                 gameState = GameState.Over;
-
+            }
+            else if (gameState == GameState.Over && loopingWavesLeft.BloodEffektFinished && 
+                loopingWavesLow.BloodEffektFinished && loopingWavesRight.BloodEffektFinished)
+            {
                 GameOver(this, new GameOverEventArgs(player.PlayerScore));
                 return;
             }
@@ -136,46 +139,7 @@ namespace MonkeyJumpGameModel
             if (bgPosition.Y < -65)
                 bgPosition.Y += 0.1f;
 
-
-            foreach(GameEntity entity in collidableGameEntities)
-            {
-                entity.Update(gameTime);
-                if (!((ICollidable)entity).Collider.CollidesWith(GameBoundsCollider))
-                {
-                    entitiesToRemove.Add(entity);
-                }
-                else if (player.Collider.CollidesWith(((ICollidable)entity).Collider))
-                {
-                    if(entity is ICollectable){
-
-                        entitiesToRemove.Add(entity);
-
-                        SoundPlayer.Instance.PlaySound(ResourceManager.MONKEY_COLLECTABLE_SOUND);
-
-                        player.PlayerScore += (entity as ICollectable).Score;
-                        if(player.BananaScore < 3)          
-                            player.BananaScore++;
-
-                    }else{
-                        if (player.BananaScore == 3)
-                        {
-                            player.BananaScore = 0;
-                            player.StartImmortality();
-
-                            SoundPlayer.Instance.PlaySound(ResourceManager.MONKEY_BANANA_FALL);
-
-                            BananaFallDown bfd = new BananaFallDown();
-                            bfd.Init(GameBounds, player.position);
-                            decorationEntities.Add(bfd);
-
-                        }
-                        else if(!player.IsImmortal)
-                        {
-                            player.KillPlayer();
-                        }
-                    }
-                }
-            }
+            UpdateCollidableGameEntities(gameTime, entitiesToRemove);
             foreach (GameEntity entity in decorationEntities)
             {
                 entity.Update(gameTime);
@@ -196,6 +160,52 @@ namespace MonkeyJumpGameModel
             elapsedTimeSinceSpeedUpdate += gameTime.ElapsedGameTime.Milliseconds;
 
             UpdateGameSpeed();
+        }
+
+        private void UpdateCollidableGameEntities(GameTime gameTime, List<GameEntity> entitiesToRemove)
+        {
+            foreach (GameEntity entity in collidableGameEntities)
+            {
+                entity.Update(gameTime);
+                if (!((ICollidable)entity).Collider.CollidesWith(GameBoundsCollider))
+                {
+                    entitiesToRemove.Add(entity);
+                }
+                else if (player.Collider.CollidesWith(((ICollidable)entity).Collider))
+                {
+                    if (entity is ICollectable)
+                    {
+
+                        entitiesToRemove.Add(entity);
+
+                        SoundPlayer.Instance.PlaySound(ResourceManager.MONKEY_COLLECTABLE_SOUND);
+
+                        player.PlayerScore += (entity as ICollectable).Score;
+                        if (player.BananaScore < 3)
+                            player.BananaScore++;
+
+                    }
+                    else
+                    {
+                        if (player.BananaScore == 3)
+                        {
+                            player.BananaScore = 0;
+                            player.StartImmortality();
+
+                            SoundPlayer.Instance.PlaySound(ResourceManager.MONKEY_BANANA_FALL);
+
+                            BananaFallDown bfd = new BananaFallDown();
+                            bfd.Init(GameBounds, player.position);
+                            decorationEntities.Add(bfd);
+
+                        }
+                        else if (!player.IsImmortal)
+                        {
+                            player.KillPlayer();
+                        }
+                    }
+                }
+            }
         }
 
         public void DrawEntities(SpriteBatch spriteBatch, GameTime gameTime)
@@ -264,10 +274,6 @@ namespace MonkeyJumpGameModel
 #endif
             mainBackground = content.Load<Texture2D>("game/backgroundGame");
             loopingBackground.LoadTextures(content);
-            loopingWavesRight.LoadTextures(content);
-            loopingWavesLeft.LoadTextures(content);
-            loopingWavesLow.LoadTextures(content);
-            
 
             // Load resuable textures
             ResourceManager.Add(ResourceManager.MONKEY_DEATH_SOUND, content.Load<SoundEffect>(ResourceManager.MONKEY_DEATH_SOUND));
@@ -283,6 +289,10 @@ namespace MonkeyJumpGameModel
             ResourceManager.Add(ResourceManager.WAVE_HIGH_LEFT_BLOOD_PATH, content.Load<Texture2D>(ResourceManager.WAVE_HIGH_LEFT_BLOOD_PATH));
             ResourceManager.Add(ResourceManager.WAVE_HIGH_Right_BLOOD_PATH, content.Load<Texture2D>(ResourceManager.WAVE_HIGH_Right_BLOOD_PATH));
             ResourceManager.Add(ResourceManager.WAVE_LOW_BLOOD_PATH, content.Load<Texture2D>(ResourceManager.WAVE_LOW_BLOOD_PATH));
+
+            loopingWavesRight.LoadTextures(content);
+            loopingWavesLeft.LoadTextures(content);
+            loopingWavesLow.LoadTextures(content);
 
             foreach (GameEntity entity in collidableGameEntities)
             {

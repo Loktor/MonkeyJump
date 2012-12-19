@@ -74,7 +74,7 @@
     <Compile Include="ICollectable.cs" />
     <Compile Include="Leaf.cs" />
     <Compile Include="LeafGenerator.cs" />
-    <Compile Include="LoopingWaves.cs" />
+    <Compile Include="LoopingWave.cs" />
     <Compile Include="DrawableRotateEntity.cs" />
     <Compile Include="MultiCollider.cs" />
     <Compile Include="ObjectSerializer.cs" />
