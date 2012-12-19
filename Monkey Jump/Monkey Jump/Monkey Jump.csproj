@@ -19,10 +19,10 @@
     <XapFilename>$(AssemblyName).xap</XapFilename>
     <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
     <XnaWindowsPhoneManifestTemplate>Properties\WMAppManifest.xml</XnaWindowsPhoneManifestTemplate>
-    <TileImage>Background.png</TileImage>
-    <TileTitle>GameStateManagementSample</TileTitle>
-    <ApplicationIcon>Game.ico</ApplicationIcon>
-    <Thumbnail>GameThumbnail.png</Thumbnail>
+    <TileImage>GameThumbnail.png</TileImage>
+    <TileTitle>Monkey Jump</TileTitle>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <Thumbnail>Background.png</Thumbnail>
     <XnaRefreshLevel>1</XnaRefreshLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Windows Phone' ">
@@ -104,11 +104,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Game.ico" />
     <Content Include="GameThumbnail.png" />
     <Content Include="Background.png">
       <XnaPlatformSpecific>true</XnaPlatformSpecific>
     </Content>
+    <Content Include="icon.ico" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\MonkeyJumpGameModel\MonkeyJumpGameModel.csproj">

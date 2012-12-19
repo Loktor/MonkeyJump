@@ -40,40 +40,6 @@ D:\temp\Monkey Jump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\WMAppManifes
 D:\temp\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Monkey Jump.xap
 D:\temp\Monkey Jump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\XapCacheFile.xml
 D:\temp\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeySprite.xnb
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\blank.xnb
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\gradient.xnb
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\palmBGLoop.xnb
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeySprite.xnb
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\menufont.xnb
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\gamefont.xnb
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\bgSound.xnb
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\bgSound.wma
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Monkey Jump.dll
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Monkey Jump.pdb
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\MonkeyJumpGameModel.dll
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\MonkeyJumpGameModel.pdb
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\Monkey Jump.dll
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\Monkey Jump.pdb
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\AppManifest.xaml
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\WMAppManifest.xml.g
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\WMAppManifest.xml
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Monkey Jump.xap
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\XapCacheFile.xml
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyClimbingSprite.xnb
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyJumpingSprite.xnb
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\banana.xnb
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\coconut.xnb
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\leaf.xnb
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\debug\rect.xnb
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyCollectable.xnb
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyDeath.xnb
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\scoreFont.xnb
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\shark.xnb
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\highWavesLeft.xnb
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\highWavesRight.xnb
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\lowWaves.xnb
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\blank.xnb
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\gradient.xnb
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\palmBGLoop.xnb
@@ -106,14 +72,56 @@ C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\obj\Windows 
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\AppManifest.xaml
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\WMAppManifest.xml.g
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\WMAppManifest.xml
-bin\Windows Phone\Debug\
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Monkey Jump.xap
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\XapCacheFile.xml
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\bananaScore.xnb
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\background.xnb
-D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyBananaFall.xnb
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\bananaScore.xnb
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\background.xnb
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\backgroundGame.xnb
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyBananaFall.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\blank.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\gradient.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\palmBGLoop.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyClimbingSprite.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyJumpingSprite.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\banana.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\coconut.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\leaf.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\debug\rect.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\shark.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\highWavesLeft.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\highWavesRight.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\lowWaves.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\bananaScore.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\background.xnb
 D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\backgroundGame.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\highWavesLeftBlood.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\highWavesRightBlood.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\lowWavesBlood.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\menufont.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\gamefont.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\scoreFont.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyCollectable.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyDeath.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeyBananaFall.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\bgSound.xnb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Monkey Jump.dll
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Monkey Jump.pdb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\MonkeyJumpGameModel.dll
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\MonkeyJumpGameModel.pdb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\Monkey Jump.dll
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\Monkey Jump.pdb
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\AppManifest.xaml
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\WMAppManifest.xml.g
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\WMAppManifest.xml
+bin\Windows Phone\Debug\
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Monkey Jump.xap
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\XapCacheFile.xml
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\bgSound.wma
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Monkey Jump.xap
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\XapCacheFile.xml
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\AppManifest.xaml
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\WMAppManifest.xml.g
+D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\obj\Windows Phone\Debug\WMAppManifest.xml
+bin\Windows Phone\Debug\

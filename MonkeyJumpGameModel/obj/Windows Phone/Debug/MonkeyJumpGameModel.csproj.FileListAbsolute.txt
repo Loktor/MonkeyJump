@@ -10,15 +10,15 @@ D:\temp\Monkey Jump\MonkeyJumpGameModel\obj\Windows Phone\Debug\ResolveAssemblyR
 D:\temp\Monkey Jump\MonkeyJumpGameModel\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 D:\temp\Monkey Jump\MonkeyJumpGameModel\obj\Windows Phone\Debug\MonkeyJumpGameModel.dll
 D:\temp\Monkey Jump\MonkeyJumpGameModel\obj\Windows Phone\Debug\MonkeyJumpGameModel.pdb
-D:\Chris\MonkeyJumpGit\MonkeyJump\MonkeyJumpGameModel\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
-D:\Chris\MonkeyJumpGit\MonkeyJump\MonkeyJumpGameModel\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-D:\Chris\MonkeyJumpGit\MonkeyJump\MonkeyJumpGameModel\obj\Windows Phone\Debug\MonkeyJumpGameModel.dll
-D:\Chris\MonkeyJumpGit\MonkeyJump\MonkeyJumpGameModel\obj\Windows Phone\Debug\MonkeyJumpGameModel.pdb
-D:\Chris\MonkeyJumpGit\MonkeyJump\MonkeyJumpGameModel\bin\Windows Phone\Debug\MonkeyJumpGameModel.dll
-D:\Chris\MonkeyJumpGit\MonkeyJump\MonkeyJumpGameModel\bin\Windows Phone\Debug\MonkeyJumpGameModel.pdb
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\bin\Windows Phone\Debug\MonkeyJumpGameModel.dll
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\bin\Windows Phone\Debug\MonkeyJumpGameModel.pdb
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\obj\Windows Phone\Debug\MonkeyJumpGameModel.dll
 C:\Dropbox-FH\MonkeyJumpProjekt\Monkey Jump\MonkeyJumpGameModel\obj\Windows Phone\Debug\MonkeyJumpGameModel.pdb
+D:\Chris\MonkeyJumpGit\MonkeyJump\MonkeyJumpGameModel\bin\Windows Phone\Debug\MonkeyJumpGameModel.dll
+D:\Chris\MonkeyJumpGit\MonkeyJump\MonkeyJumpGameModel\bin\Windows Phone\Debug\MonkeyJumpGameModel.pdb
+D:\Chris\MonkeyJumpGit\MonkeyJump\MonkeyJumpGameModel\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+D:\Chris\MonkeyJumpGit\MonkeyJump\MonkeyJumpGameModel\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\Chris\MonkeyJumpGit\MonkeyJump\MonkeyJumpGameModel\obj\Windows Phone\Debug\MonkeyJumpGameModel.dll
+D:\Chris\MonkeyJumpGit\MonkeyJump\MonkeyJumpGameModel\obj\Windows Phone\Debug\MonkeyJumpGameModel.pdb

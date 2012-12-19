@@ -44,6 +44,12 @@ namespace MonkeyJumpGameModel
             texture = content.Load<Texture2D>(texName);
         }
 
+        public void setBloodTexture()
+        {
+            String texName = isRight ? "game/highWavesRightBlood" : isLow ? "game/lowWavesBlood" : "game/highWavesLeftBlood";
+            texture = GameManager.Instance.ResourceManager.RetreiveTexture(texName);
+        }
+
 
         public void ResetPosition(int overflow)
         {

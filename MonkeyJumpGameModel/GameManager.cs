@@ -114,13 +114,18 @@ namespace MonkeyJumpGameModel
             }
             if (player.PlayerState == PlayerState.Dead)
             {
+                loopingWavesLeft.setBloodTexture();
+                loopingWavesLow.setBloodTexture();
+                loopingWavesRight.setBloodTexture();
+
                 if (saveGameManager.Highscore.CheckIfNewHighscore(player.PlayerScore))
                 {
                     saveGameManager.Highscore.AddScore("test", player.PlayerScore);
                     saveGameManager.SaveHighscoreList();
                     gameState = GameState.Over;
 
-                    Guide.BeginShowKeyboardInput(0, "Enter Name:", "Name for the highscore.", "Test Player", null, null);
+                    
+                    //Guide.BeginShowKeyboardInput(0, "Enter Name:", "Name for the highscore.", "Test Player", null, null);
                 }
                 return;
             }
@@ -277,6 +282,10 @@ namespace MonkeyJumpGameModel
             ResourceManager.Add(ResourceManager.COCONUT_PATH, content.Load<Texture2D>(ResourceManager.COCONUT_PATH));
             ResourceManager.Add(ResourceManager.SHARK_PATH, content.Load<Texture2D>(ResourceManager.SHARK_PATH));
             ResourceManager.Add(ResourceManager.SCORE_FONT, content.Load<SpriteFont>(ResourceManager.SCORE_FONT));
+
+            ResourceManager.Add(ResourceManager.WAVE_HIGH_LEFT_BLOOD_PATH, content.Load<Texture2D>(ResourceManager.WAVE_HIGH_LEFT_BLOOD_PATH));
+            ResourceManager.Add(ResourceManager.WAVE_HIGH_Right_BLOOD_PATH, content.Load<Texture2D>(ResourceManager.WAVE_HIGH_Right_BLOOD_PATH));
+            ResourceManager.Add(ResourceManager.WAVE_LOW_BLOOD_PATH, content.Load<Texture2D>(ResourceManager.WAVE_LOW_BLOOD_PATH));
 
             foreach (GameEntity entity in collidableGameEntities)
             {

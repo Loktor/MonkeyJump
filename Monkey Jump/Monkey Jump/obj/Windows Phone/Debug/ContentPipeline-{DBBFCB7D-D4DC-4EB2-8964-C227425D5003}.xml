@@ -29,15 +29,6 @@
       <Time>2012-12-17T16:11:36.4067067+01:00</Time>
     </Item>
     <Item>
-      <Source>game\monkeySprite.png</Source>
-      <Name>game\monkeySprite</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\monkeySprite.xnb</Output>
-      <Time>2012-12-17T16:11:36.4067067+01:00</Time>
-    </Item>
-    <Item>
       <Source>game\monkeyClimbingSprite.png</Source>
       <Name>game\monkeyClimbingSprite</Name>
       <Importer>TextureImporter</Importer>
@@ -143,7 +134,43 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\background.xnb</Output>
-      <Time>2012-12-17T16:27:30.2074397+01:00</Time>
+      <Time>2012-12-17T17:57:47.1979035+01:00</Time>
+    </Item>
+    <Item>
+      <Source>game\backgroundGame.png</Source>
+      <Name>game\backgroundGame</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\backgroundGame.xnb</Output>
+      <Time>2012-12-18T19:14:39.6216339+01:00</Time>
+    </Item>
+    <Item>
+      <Source>game\highWavesLeftBlood.png</Source>
+      <Name>game\highWavesLeftBlood</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\highWavesLeftBlood.xnb</Output>
+      <Time>2012-12-18T20:01:31.5571417+01:00</Time>
+    </Item>
+    <Item>
+      <Source>game\highWavesRightBlood.png</Source>
+      <Name>game\highWavesRightBlood</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\highWavesRightBlood.xnb</Output>
+      <Time>2012-12-18T20:00:44.0977454+01:00</Time>
+    </Item>
+    <Item>
+      <Source>game\lowWavesBlood.png</Source>
+      <Name>game\lowWavesBlood</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\lowWavesBlood.xnb</Output>
+      <Time>2012-12-18T20:01:08.6385356+01:00</Time>
     </Item>
     <Item>
       <Source>menufont.spritefont</Source>
@@ -173,16 +200,6 @@
       <Time>2012-12-17T16:11:36.4067067+01:00</Time>
     </Item>
     <Item>
-      <Source>game\bgSound.mp3</Source>
-      <Name>game\bgSound</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\bgSound.xnb</Output>
-      <Extra>D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\bgSound.wma</Extra>
-      <Time>2012-12-17T16:11:36.3911067+01:00</Time>
-    </Item>
-    <Item>
       <Source>game\monkeyCollectable.wav</Source>
       <Name>game\monkeyCollectable</Name>
       <Importer>WavImporter</Importer>
@@ -210,13 +227,14 @@
       <Time>2012-12-17T16:11:36.4067067+01:00</Time>
     </Item>
     <Item>
-      <Source>game\backgroundGame.png</Source>
-      <Name>game\backgroundGame</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
+      <Source>game\bgSound.mp3</Source>
+      <Name>game\bgSound</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\backgroundGame.xnb</Output>
-      <Time>2012-12-17T17:23:23.8672433+01:00</Time>
+      <Output>D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\bgSound.xnb</Output>
+      <Extra>D:\Chris\MonkeyJumpGit\MonkeyJump\Monkey Jump\Monkey Jump\bin\Windows Phone\Debug\Content\game\bgSound.wma</Extra>
+      <Time>2012-12-18T21:19:06.0606517+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

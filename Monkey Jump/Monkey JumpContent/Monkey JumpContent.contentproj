@@ -60,20 +60,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="game\bgSound.mp3">
-      <Name>bgSound</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="game\monkeySprite.png">
-      <Name>monkeySprite</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="game\monkeyClimbingSprite.png">
       <Name>monkeyClimbingSprite</Name>
       <Importer>TextureImporter</Importer>
@@ -180,6 +166,30 @@
       <Name>monkeyBananaFall</Name>
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="game\highWavesLeftBlood.png">
+      <Name>highWavesLeftBlood</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="game\highWavesRightBlood.png">
+      <Name>highWavesRightBlood</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="game\lowWavesBlood.png">
+      <Name>lowWavesBlood</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="game\bgSound.mp3">
+      <Name>bgSound</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />

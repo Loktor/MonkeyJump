@@ -1,7 +1,6 @@
 Content\blank.xnb
 Content\gradient.xnb
 Content\game\palmBGLoop.xnb
-Content\game\monkeySprite.xnb
 Content\game\monkeyClimbingSprite.xnb
 Content\game\monkeyJumpingSprite.xnb
 Content\game\banana.xnb
@@ -14,12 +13,15 @@ Content\game\highWavesRight.xnb
 Content\game\lowWaves.xnb
 Content\game\bananaScore.xnb
 Content\game\background.xnb
+Content\game\backgroundGame.xnb
+Content\game\highWavesLeftBlood.xnb
+Content\game\highWavesRightBlood.xnb
+Content\game\lowWavesBlood.xnb
 Content\menufont.xnb
 Content\gamefont.xnb
 Content\game\scoreFont.xnb
-Content\game\bgSound.xnb
-Content\game\bgSound.wma
 Content\game\monkeyCollectable.xnb
 Content\game\monkeyDeath.xnb
 Content\game\monkeyBananaFall.xnb
-Content\game\backgroundGame.xnb
+Content\game\bgSound.xnb
+Content\game\bgSound.wma

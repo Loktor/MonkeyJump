@@ -24,6 +24,13 @@ namespace MonkeyJumpGameModel
         public const string MONKEY_BANANA_FALL = "game/monkeyBananaFall";
         public const string SCORE_FONT = "game/scoreFont";
 
+        public const string WAVE_HIGH_LEFT_PATH = "game/highWavesLeft";
+        public const string WAVE_HIGH_LEFT_BLOOD_PATH = "game/highWavesLeftBlood";
+        public const string WAVE_HIGH_Right_PATH = "game/highWavesRight";
+        public const string WAVE_HIGH_Right_BLOOD_PATH = "game/highWavesRightBlood";
+        public const string WAVE_LOW_PATH = "game/lowWaves";
+        public const string WAVE_LOW_BLOOD_PATH = "game/lowWavesBlood";
+
         Dictionary<String, Texture2D> textureDictionary = new Dictionary<string, Texture2D>();
         Dictionary<String, SoundEffect> soundDictionary = new Dictionary<string, SoundEffect>();
         Dictionary<String, SpriteFont> fontDictionary = new Dictionary<string, SpriteFont>();
