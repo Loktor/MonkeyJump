@@ -95,7 +95,6 @@ namespace MonkeyJumpGameModel
         private MultiCollider CreateJumpCollider(Vector2 position, Size size, bool centered, Direction direction)
         {
             MultiCollider jumpCollider = new MultiCollider(position, size, centered, direction);
-            //jumpCollider.AddCollider(new Collider(new Rectangle(monkeySize.Width / 2 - 20, 0, 40, monkeySize.Height), false));
             jumpCollider.AddCollider(new Collider(new Rectangle(0, monkeySize.Height / 2 - 25, monkeySize.Width, 40), false));
             return jumpCollider;
         }
@@ -130,8 +129,9 @@ namespace MonkeyJumpGameModel
             }
             else if (playerState == PlayerState.Dying)
             {
-                position.Y += gameTime.ElapsedGameTime.Milliseconds / 10 * GameManager.Instance.GameSpeed * 1.5f;
+                position.Y += gameTime.ElapsedGameTime.Milliseconds / 10 * GameManager.Instance.GameSpeed * 2f;
                 collider.MoveToPoint(position);
+                CurrentAnimation.Rotation += 0.9f;
 
                 if (position.Y > gameBounds.Bottom)
                 {
