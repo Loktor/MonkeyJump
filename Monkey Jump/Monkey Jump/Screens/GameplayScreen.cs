@@ -96,6 +96,7 @@ namespace Monkey_Jump
         {
             gameOverScreen = new GameOverScreen(e.Score);
             ScreenManager.AddScreen(gameOverScreen, PlayerIndex.One);
+            gameOverScreen.DisplayNameKeyboard();
             gameOverScreen.GameOverClosingPopup += new GameOverClosingHandler(GameOverPopupClosing);
         }
 

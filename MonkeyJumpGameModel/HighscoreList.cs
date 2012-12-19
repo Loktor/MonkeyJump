@@ -69,7 +69,7 @@ namespace MonkeyJumpGameModel
                 highscoreEntries.Add(new HighscoreEntry(name,score));
                 return;
             }
-            highscoreEntries.OrderBy(h => h.Score);
+            highscoreEntries = highscoreEntries.OrderBy(h => h.Score).ToList();
             highscoreEntries.RemoveAt(0);
             highscoreEntries.Add(new HighscoreEntry(name, score));
         }

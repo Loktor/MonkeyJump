@@ -42,11 +42,6 @@ namespace Monkey_Jump.Screens
 
             HighscoreEntry currentEntry;
 
-            if (highscoreEntries.Count == 0)
-            {
-                base.MenuTitle = "No highscores yet";
-            }
-
             // Add entries to the menu.
             for (int i = 0; i < highscoreEntries.Count; i++)
             {

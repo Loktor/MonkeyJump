@@ -43,15 +43,6 @@ namespace Monkey_Jump.Screens
         {
             this.score = score;
 
-            if (SaveGameManager.Instance.Highscore.CheckIfNewHighscore(score))
-            {
-                SaveGameManager saveGameManager = SaveGameManager.Instance;
-                IAsyncResult result = Guide.BeginShowKeyboardInput(0, "You made it in the highscorelist: " + score + " points", "Enter your name (max 10 letters):", saveGameManager.Options.LastTypedPlayerName == "" ? "Monkey" : SaveGameManager.Instance.Options.LastTypedPlayerName, GetTypedChars, null);
-                while (!result.IsCompleted) ;
-                saveGameManager.Highscore.AddScore(saveGameManager.Options.LastTypedPlayerName, score);
-                saveGameManager.SaveHighscoreList();
-            }
-
             // Create our menu entries.
             MenuEntry highScoreMenuEntry = new MenuEntry("Highscore");
             MenuEntry replayMenuEntry = new MenuEntry("Replay");
@@ -69,6 +60,20 @@ namespace Monkey_Jump.Screens
 
             TransitionOnTime = TimeSpan.FromSeconds(0.2);
             TransitionOffTime = TimeSpan.FromSeconds(0.2);
+        }
+
+        public void DisplayNameKeyboard()
+        {
+            if (SaveGameManager.Instance.Highscore.CheckIfNewHighscore(score))
+            {
+                SaveGameManager saveGameManager = SaveGameManager.Instance;
+                IAsyncResult result = Guide.BeginShowKeyboardInput(0, "You made it in the highscorelist: " + score + " points", "Enter your name (max 10 letters):", saveGameManager.Options.LastTypedPlayerName == "" ? "Monkey" : SaveGameManager.Instance.Options.LastTypedPlayerName, GetTypedChars, null);
+                while (!result.IsCompleted) ;
+                saveGameManager.Highscore.AddScore(saveGameManager.Options.LastTypedPlayerName, score);
+                saveGameManager.SaveHighscoreList();
+                SaveGameManager.Instance.SaveOptions();
+                ScreenManager.AddScreen(new HighscoreScreen(true), PlayerIndex.One);
+            }
         }
 
 
@@ -148,8 +153,6 @@ namespace Monkey_Jump.Screens
             {
                 SaveGameManager.Instance.Options.LastTypedPlayerName = enteredName;
             }
-            SaveGameManager.Instance.SaveOptions();
-            ScreenManager.AddScreen(new HighscoreScreen(true), PlayerIndex.One);
         }
     }
 }

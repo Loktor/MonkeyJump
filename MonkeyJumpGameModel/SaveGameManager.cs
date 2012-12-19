@@ -111,6 +111,15 @@ namespace MonkeyJumpGameModel
                 IsolatedStorageFileStream file = new IsolatedStorageFileStream(HIGHSCORE_FILE, FileMode.Open, store);
                 highscore = highscoreSerializer.Deserialize(file);
             }
+            else
+            {
+                List<HighscoreEntry> highscoreEntries = new List<HighscoreEntry>() { new HighscoreEntry("Master Monkey", 7000), 
+                    new HighscoreEntry("Angry Monkey", 4500), 
+                    new HighscoreEntry("Jumping Monkey", 3000), 
+                    new HighscoreEntry("Junior Monkey", 1500), 
+                    new HighscoreEntry("Baby Monkey", 500) };
+                highscore = new HighscoreList(highscoreEntries);
+            }
         }
 
         /// <summary>
