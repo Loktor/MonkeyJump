@@ -10,6 +10,8 @@ using Microsoft.Xna.Framework.GamerServices;
 
 namespace MonkeyJumpGameModel
 {
+    public delegate void GameOverEventHandler(object sender, GameOverEventArgs e);
+
     public class GameManager
     {
         private List<GameEntity> collidableGameEntities;
@@ -48,6 +50,7 @@ namespace MonkeyJumpGameModel
         public float GameSpeed { get; set; }
         public Rectangle GameBounds { get; set; }
         public ResourceManager ResourceManager { get; set; }
+        public event GameOverEventHandler GameOver;
 
         public static GameManager CreateNewGameManager(Viewport screen)
         {
@@ -118,14 +121,11 @@ namespace MonkeyJumpGameModel
                 loopingWavesLow.setBloodTexture();
                 loopingWavesRight.setBloodTexture();
 
-                if (saveGameManager.Highscore.CheckIfNewHighscore(player.PlayerScore))
-                {
-                    saveGameManager.Highscore.AddScore("test", player.PlayerScore);
-                    saveGameManager.SaveHighscoreList();
-                    gameState = GameState.Over;
+                gameState = GameState.Over;
 
-                    
-                    //Guide.BeginShowKeyboardInput(0, "Enter Name:", "Name for the highscore.", "Test Player", null, null);
+                GameOver(this, new GameOverEventArgs(player.PlayerScore));
+
+                }
                 }
                 return;
             }

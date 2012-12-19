@@ -1,35 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="MonkeyJumpGameModel.DrawableEntity">
-    <Position X="5.5" Y="3.25" Width="1.5" />
+  <Class Name="MonkeyJumpGameModel.DrawableEntity" Collapsed="true">
+    <Position X="6.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>DrawableEntity.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MonkeyJumpGameModel.GameEntity">
-    <Position X="4.5" Y="0.5" Width="1.5" />
+  <Class Name="MonkeyJumpGameModel.GameEntity" Collapsed="true">
+    <Position X="3.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQEAAAAAAAAAgAgAAAAIAAAAAAAAAAAAAACAAAAAAA=</HashCode>
       <FileName>GameEntity.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MonkeyJumpGameModel.GameManager">
-    <Position X="8" Y="0.5" Width="1.5" />
+  <Class Name="MonkeyJumpGameModel.GameManager" Collapsed="true">
+    <Position X="9" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAIBFCQBQAkAAAhBAAQEAKCEABBAAABRRCAIgAAAAg=</HashCode>
+      <HashCode>kAAIBFCQhAAkAAAhBAKQEAKCEABBAAABRRDgIggAEAg=</HashCode>
       <FileName>GameManager.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MonkeyJumpGameModel.Animation">
+  <Class Name="MonkeyJumpGameModel.Animation" Collapsed="true">
     <Position X="0.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CASAAAEAAAAAAoAAAIICAAABAMAAAAAAAAIAAAACAAA=</HashCode>
       <FileName>Animation.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MonkeyJumpGameModel.AnimationEntity">
-    <Position X="3.25" Y="3.25" Width="1.5" />
+  <Class Name="MonkeyJumpGameModel.AnimationEntity" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAgAAAAAAAAAAAAAAAAAEAAAAAAAAACA=</HashCode>
       <FileName>AnimationEntity.cs</FileName>
@@ -38,30 +38,173 @@
       <Property Name="CurrentAnimation" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="MonkeyJumpGameModel.Collider">
-    <Position X="10" Y="4.25" Width="1.5" />
+  <Class Name="MonkeyJumpGameModel.Collider" Collapsed="true">
+    <Position X="11" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AGAEAAAAEAAAAAAAAAIABEAAAAAAQAEAAAAAAAAQAAA=</HashCode>
+      <HashCode>AGAAAAAAEAAAAAAAAAIABEAgAAACQAEAAAAAAAAQAAA=</HashCode>
       <FileName>Collider.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MonkeyJumpGameModel.Player">
-    <Position X="3.25" Y="7" Width="1.5" />
+  <Class Name="MonkeyJumpGameModel.Player" Collapsed="true">
+    <Position X="1.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEQkCACAKAAABhCAAAAAAAAAAAAAAIAQGAACFAAAAIA=</HashCode>
+      <HashCode>AEQkCBCAKAAARhCgAAQAAAAEBAAAAIAQGAACFAAAAKA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="MonkeyJumpGameModel.LoopingBackground">
-    <Position X="5.5" Y="5.5" Width="1.5" />
+  <Class Name="MonkeyJumpGameModel.LoopingBackground" Collapsed="true">
+    <Position X="8.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQEAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>LoopingBackground.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="MonkeyJumpGameModel.Banana" Collapsed="true">
+    <Position X="2.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AERAAAAAAIAAAAgAACAAAAAAAAAAAAAQAAACQAAAAAA=</HashCode>
+      <FileName>Banana.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MonkeyJumpGameModel.BananaFallDown" Collapsed="true">
+    <Position X="8.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAAIAAAgAAAAAAAgAAAAAAAAAAAAADAAAAAAA=</HashCode>
+      <FileName>BananaFallDown.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonkeyJumpGameModel.Coconut" Collapsed="true">
+    <Position X="10.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAACAAIAAAA=</HashCode>
+      <FileName>Coconut.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MonkeyJumpGameModel.CoconutGenerator" Collapsed="true">
+    <Position X="15.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAQAEEAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>CoconutGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonkeyJumpGameModel.DrawableRotateEntity" Collapsed="true">
+    <Position X="4.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAoAAAAICAAAAAEAAAgAAAAAAAAgAAAA=</HashCode>
+      <FileName>DrawableRotateEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonkeyJumpGameModel.GameEntityGenerator" Collapsed="true">
+    <Position X="14.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameEntityGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonkeyJumpGameModel.HighscoreEntry">
+    <Position X="29.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HighscoreEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonkeyJumpGameModel.HighscoreList">
+    <Position X="25.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAABAQAAAQAAAAA=</HashCode>
+      <FileName>HighscoreList.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="HighscoreEntries" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MonkeyJumpGameModel.Leaf" Collapsed="true">
+    <Position X="6.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAAAAIAAAAACAAAAAAAAAAAAAQAAACAgAAAAA=</HashCode>
+      <FileName>Leaf.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MonkeyJumpGameModel.LeafGenerator" Collapsed="true">
+    <Position X="13.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAQAEEAAAAAAAAAAAgBAAAAAAAAIAIAAAAAQ=</HashCode>
+      <FileName>LeafGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonkeyJumpGameModel.LoopingWaves" Collapsed="true">
+    <Position X="9" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEAAAACAAAAAAAAAAAAAAAAAAAAAAAQAAAAAABAAA=</HashCode>
+      <FileName>LoopingWaves.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonkeyJumpGameModel.MultiCollider" Collapsed="true">
+    <Position X="11" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAEAACEAAAIAAAAAIABEAAAAAAACAQAAAAEAAQAAA=</HashCode>
+      <FileName>MultiCollider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonkeyJumpGameModel.ObjectSerializer&lt;T&gt;" Collapsed="true">
+    <Position X="22.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACBAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ObjectSerializer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonkeyJumpGameModel.Options">
+    <Position X="23" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAABAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Options.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonkeyJumpGameModel.ResourceManager" Collapsed="true">
+    <Position X="10.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAgACAAAAACgAAACQACIAAABAAACBRABAAhAABAA=</HashCode>
+      <FileName>ResourceManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonkeyJumpGameModel.SaveGameManager" Collapsed="true">
+    <Position X="20.5" Y="3.75" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AEAkAAAAIAAAAAgABQAAAGAABABCBAAAQAAAAABAAQA=</HashCode>
+      <FileName>SaveGameManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Options" />
+      <Property Name="Highscore" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MonkeyJumpGameModel.Shark" Collapsed="true">
+    <Position X="4.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQggAAAAAAAAAAAAAAAAAAAAAAAAIAAgAACAAAAAAA=</HashCode>
+      <FileName>Shark.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonkeyJumpGameModel.Size" Collapsed="true">
+    <Position X="22.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Size.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonkeyJumpGameModel.SoundPlayer" Collapsed="true">
+    <Position X="9" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAABAIAAAQAAAAAAAAAA=</HashCode>
+      <FileName>SoundPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="MonkeyJumpGameModel.ICollidable">
-    <Position X="10" Y="0.75" Width="1.5" />
+    <Position X="11" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
       <FileName>ICollidable.cs</FileName>
@@ -70,5 +213,33 @@
       <Property Name="Collider" />
     </ShowAsAssociation>
   </Interface>
+  <Interface Name="MonkeyJumpGameModel.ICollectable" Collapsed="true">
+    <Position X="13.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ICollectable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="MonkeyJumpGameModel.Direction">
+    <Position X="16.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAA=</HashCode>
+      <FileName>Direction.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MonkeyJumpGameModel.GameState">
+    <Position X="18.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAIAAAAAAAAAAgAIAAAAAAAAAAA=</HashCode>
+      <FileName>GameState.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MonkeyJumpGameModel.PlayerState">
+    <Position X="20.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAAEAAAAAACAAAIAA=</HashCode>
+      <FileName>PlayerState.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

@@ -18,9 +18,7 @@ namespace MonkeyJumpGameModel
         /// Constructor
         /// </summary>
         /// <param name="backgroundMusic">defines if background music is enabled</param>
-        /// <param name="gameplaySounds">d
-        /// 
-        /// efines if gamplay sound are enabled</param>
+        /// <param name="gameplaySounds">defines if gamplay sound are enabled</param>
         public Options(bool backgroundMusic, bool gameplaySounds)
         {
             GamePlaySoundsEnabled = gameplaySounds;
@@ -32,5 +30,8 @@ namespace MonkeyJumpGameModel
 
         [DataMember]
         public Boolean BackgroundMusicEnabled { get; set; }
+
+        [DataMember]
+        public String LastTypedPlayerName { get; set; }
     }
 }

@@ -72,7 +72,7 @@ namespace MonkeyJumpGameModel
         {
             if (textureDictionary.ContainsKey(key))
             {
-                Debug.WriteLine("Key is already in dictionary");
+                Debug.WriteLine("Key " + key + " is already in dictionary, resource refreshed");
                 textureDictionary.Remove(key);
                 textureDictionary.Add(key, value);
                 return;
@@ -84,7 +84,7 @@ namespace MonkeyJumpGameModel
         {
             if (soundDictionary.ContainsKey(key))
             {
-                Debug.WriteLine("Key is already in dictionary");
+                Debug.WriteLine("Key " + key + " is already in dictionary, resource refreshed");
                 soundDictionary.Remove(key);
                 soundDictionary.Add(key, value);
                 return;
@@ -96,7 +96,7 @@ namespace MonkeyJumpGameModel
         {
             if (fontDictionary.ContainsKey(key))
             {
-                Debug.WriteLine("Key is already in dictionary");
+                Debug.WriteLine("Key " + key + " is already in dictionary, resource refreshed");
                 fontDictionary.Remove(key);
                 fontDictionary.Add(key, value);
                 return;

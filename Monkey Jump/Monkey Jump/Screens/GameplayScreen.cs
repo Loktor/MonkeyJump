@@ -18,6 +18,7 @@ using Microsoft.Xna.Framework.Media;
 using MonkeyJumpGameModel;
 using Microsoft.Xna.Framework.Input.Touch;
 using System.Diagnostics;
+using Monkey_Jump.Screens;
 #endregion
 
 namespace Monkey_Jump
@@ -31,6 +32,7 @@ namespace Monkey_Jump
     {
         #region Fields
 
+        GameOverScreen gameOverScreen;
         ContentManager content;
         SpriteFont gameFont;
         GameManager gameManager;
@@ -65,6 +67,8 @@ namespace Monkey_Jump
                 gameManager = GameManager.CreateNewGameManager(ScreenManager.GraphicsDevice.Viewport);
 
             gameFont = content.Load<SpriteFont>("gamefont");
+
+            gameManager.GameOver += new GameOverEventHandler(HandleGameOver);
             gameManager.LoadEntityTextures(content);
 
             gameManager.InitEntities();
@@ -86,6 +90,18 @@ namespace Monkey_Jump
 
                 MediaPlayer.Play(bgMusic);
             }
+        }
+
+        void HandleGameOver(object sender, GameOverEventArgs e)
+        {
+            gameOverScreen = new GameOverScreen(e.Score);
+            ScreenManager.AddScreen(gameOverScreen, PlayerIndex.One);
+            gameOverScreen.GameOverClosingPopup += new GameOverClosingHandler(GameOverPopupClosing);
+        }
+
+        void GameOverPopupClosing(object sender, PlayerIndexEventArgs e)
+        {
+            this.ExitScreen();
         }
 
 
